@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `sap_php`.`m_outlet`.`COMP_CODE` AS `COMP_CODE`,`sap_php`.`m_outlet`.`OUTLET` AS `OUTLET`,`sap_php`.`m_outlet`.`OUTLET_NAME1` AS `OUTLET_NAME1`,`sap_php`.`m_outlet`.`CITY` AS `CITY`,`sap_php`.`m_outlet`.`OPENING_DATE` AS `OPENING_DATE`,_utf8\'0000-00-00\' AS `SEWA_AWAL`,_utf8\'0000-00-00\' AS `SEWA_AKHIR`,`sap_php`.`m_outlet`.`OUTLET_NAME2` AS `OUTLET_NAME2`,`sap_php`.`m_outlet`.`STOR_LOC_NAME` AS `STOR_LOC_NAME` from `sap_php`.`m_outlet`
+md5=ac273927e3631b3d5814f403342eea6b
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=172.71.77.88
+suid=1
+with_check_option=0
+timestamp=2016-08-02 03:32:56
+create-version=1
+source=select `m_outlet`.`COMP_CODE` AS `COMP_CODE`,`m_outlet`.`OUTLET` AS `OUTLET`,`m_outlet`.`OUTLET_NAME1` AS `OUTLET_NAME1`,`m_outlet`.`CITY` AS `CITY`,`m_outlet`.`OPENING_DATE` AS `OPENING_DATE`,_utf8\'0000-00-00\' AS `SEWA_AWAL`,_utf8\'0000-00-00\' AS `SEWA_AKHIR`,`m_outlet`.`OUTLET_NAME2` AS `OUTLET_NAME2`,`m_outlet`.`STOR_LOC_NAME` AS `STOR_LOC_NAME` from `m_outlet`
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select `sap_php`.`m_outlet`.`COMP_CODE` AS `COMP_CODE`,`sap_php`.`m_outlet`.`OUTLET` AS `OUTLET`,`sap_php`.`m_outlet`.`OUTLET_NAME1` AS `OUTLET_NAME1`,`sap_php`.`m_outlet`.`CITY` AS `CITY`,`sap_php`.`m_outlet`.`OPENING_DATE` AS `OPENING_DATE`,\'0000-00-00\' AS `SEWA_AWAL`,\'0000-00-00\' AS `SEWA_AKHIR`,`sap_php`.`m_outlet`.`OUTLET_NAME2` AS `OUTLET_NAME2`,`sap_php`.`m_outlet`.`STOR_LOC_NAME` AS `STOR_LOC_NAME` from `sap_php`.`m_outlet`

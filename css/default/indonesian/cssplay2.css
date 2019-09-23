@@ -1,0 +1,101 @@
+
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/drop_examples.html
+Copyright (c) 2005-2009 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+
+ /* common styling */
+ .container2 {
+text-align:center; background:#eee url(panahatas.gif); border:1px solid #909; border-width:5px 1px 1px 1px; height:10px;
+margin:0 0 20px 0; /* for this demo only */
+
+}
+.image1 { background-image:(images/menu2Depan.gif);}
+
+ .menu2 {
+ 
+  text-align: left; font-family: Verdana, Arial, Helvetica, sans-serif; position:relative; font-size:0.88em; background-color:#FFCC00; width:300px; height:30px; margin:10px ;
+}
+
+.menu2 ul {
+padding:0;margin:0;list-style-type:none;
+}
+.menu2 ul li {
+float:left; position:relative;
+ }
+
+{ background-image: url(images/menu2Depan.gif);}
+.menu2 ul li.Transaksi1 {background:transparent url(file:///C|/apachefriends/xampp/htdocs/sap_php/css/images/menu2Transaksi1.gif));}
+.menu2 ul li.services {background:transparent url(menu4services.gif);}
+.menu2 ul li.contact {background:transparent url(menu4contact.gif);}
+.menu2 ul li.site {background:transparent url(menu4site.gif);}
+.menu2 ul li.news {background:transparent url(menu4news.gif);}
+
+
+
+.menu2 ul li a, .menu2 ul li a:visited {
+display:block; text-decoration: underline; width:105px; height:30px; color: #000000; padding-left:28px; line-height:30px;
+}
+* html .menu2 ul li a, .menu2  ul li a:visited {
+width:100px; w\idth:70px;
+}
+
+.menu2 ul li ul {
+visibility:hidden; position:absolute; top:0; left:0; height:0; overflow:hidden;
+}
+.menu2 table {
+margin:0px; border-collapse:collapse; font-size:1.01em;
+}
+
+/* fist line style for IE7 and non-IE browsers and the second line for IE5.5 and IE6 */
+.menu2 ul li:hover a,
+.menu2 ul li a:hover {
+color:#c00; text-decoration: none; border:0;width:100px;
+}
+.menu2 ul li:hover ul,
+.menu2 ul li a:hover ul {
+visibility:visible; width:150px;  height:auto; position:absolute; top:28px; left:25px; background-color:#FFCC00; border:0px solid #909; overflow:visible ; wi/dth:50px;
+}
+.menu3 ul li:hover ul,
+.menu3 ul li a:hover ul {
+visibility:visible; width:350px;  height:auto; position:absolute; top:28px; left:25px; background-color:#FFCC00; border:0px solid #909; overflow:visible ; wi/dth:50px;
+}
+.menu2 ul li:hover ul li a,
+.menu2 ul li a:hover ul li a {
+display: list-item; background:transparent; text-decoration:none; color:#c00; height:auto; line-height:0em; padding:8px 0px 12px 9px; width:400px;
+}
+.menu2 ul li:hover ul li a.drop,
+.menu2 ul li a:hover ul li a.drop {
+display:block; color:#000; height:auto; line-height:1.4em; padding:5px 5px 5px 5px; width:200px; width:125px;
+}
+.menu2 ul li:hover ul li ul,
+.menu2 ul li a:hover ul li a ul {
+visibility:hidden; position:absolute; top:0; left:0; height:0; overflow:hidden;
+}
+.menu2 ul li:hover ul li a:hover,
+.menu2 ul li a:hover ul li a:hover {
+color:#00f; text-decoration: none;
+}
+.menu2 ul li:hover ul li:hover ul,
+.menu2 ul li a:hover ul li a:hover ul {
+visibility:visible; width:270px; position:absolute; top:0; color:#000; left:130px; height:auto; border:0px solid #909 ;
+}
+.menu2 ul li:hover ul li:hover ul.left,
+.menu2 ul li a:hover ul li a:hover ul.left {
+left:-160px;
+}
+.menu2 ul li:hover ul li:hover ul li a,
+.menu2 ul li a:hover ul li a:hover ul li a {
+display:block; color:#00f; height:auto; line-height:1.5em; padding:5px 5px 5px 5px; width:250px;
+}
+* htm2 .menu2 ul li a:hover ul li a:hover ul li a {padding:4px 5px 4px 5px;}
+
+.menu2 ul li:hover ul li:hover ul li:hover a,
+.menu2 ul li a:hover ul li a:hover ul li a:hover {
+color:#000; text-decoration:underline;
+}

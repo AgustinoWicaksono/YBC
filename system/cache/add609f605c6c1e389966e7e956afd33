@@ -1,0 +1,356 @@
+1492399682TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ID" lang="ID" >
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="id" />
+<meta http-equiv="Copyright" content="YBC" />
+<meta http-equiv="Author" content="YBC" />
+<meta name="rating" content="General" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 26 Jul 1997 05:00:00 GMT" />
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Production Transaction - YBC SAP Portal | YBC (Manager)</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" type="image/png" href="http://localhost:8001/ybc/favicon.png">
+<!-- Start of menu and main CSS //-->
+<style type="text/css">@import url(http://localhost:8001/ybc/css/swebee.css?v=59);</style>
+<link rel="stylesheet" type="text/css" href="http://localhost:8001/ybc/css/main.css?v=59" />
+<link href="http://localhost:8001/ybc/css/dropdown.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.ultimate.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+
+<!-- End of menu and main CSS //-->
+<script src="http://localhost:8001/ybc/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var jagservtime = new Date(17,4,17,9,58,02);
+</script>
+<script src="http://localhost:8001/ybc/js/time.js" type="text/javascript"></script>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+	function confirm_logout(url) {
+		var m = confirm('Apakah Anda benar-benar ingin logout?');
+		if(m) {
+			location.href=url;
+		}
+	}
+//-->
+</script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8001/ybc/css/default/indonesian/calendar.css" />
+	<script language="javascript" type="text/javascript">
+	var A_TCALDEF = {
+		'months' : ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
+		
+		'weekdays' : ['M', 'S', 'S', 'R', 'K', 'J', 'S'],
+
+
+		'yearscroll': true, // show year scroller
+		'weekstart': 0, // first day of week: 0-Su or 1-Mo
+		'centyear'  : 70, // 2 digit years less than 'centyear' are in 20xx, othewise in 19xx.
+		'imgpath' : 'http://localhost:8001/ybc/js/calendar/default/indonesian/img/' // directory with calendar images
+	}
+
+	</script>
+	<script language="javascript" type="text/javascript" src="http://localhost:8001/ybc/js/tigracalendar.js"></script>
+</head>
+
+<body>
+<div id="jaghead" class="swbbodyb">
+    	<div style="float:left;margin-right:5px;padding:5px;height:70px;">
+		<div style="float:left;margin-right:5px;">
+		
+        <img src="http://localhost:8001/ybc/images/ybc-logo-small.png" border="0" alt="" />
+		</div>
+		<div style="float:left;margin-right:15px;">
+		
+         <strong style="font-size:120%;">General Warehouse</strong><br />
+		 <a href="http://localhost:8001/ybc/store">General Warehouse</a> / 01		
+         <span class="jchange"><a href="http://localhost:8001/ybc/plant/change/tpaket" title="Ganti Outlet">Ganti Outlet</a></span>
+		 
+         </div>
+	</div>
+             		<div style="border-left:#778899 2px solid;float:left;margin-right:5px;padding:7px;"><div class="jag_title">YBC SAP Portal</div>
+                        <br /><div style="float:left;margin-top:-1px;margin-right:3px;"><img src="http://localhost:8001/ybc/images/user.png" alt="" border="0" /></div> <strong style="color:#337ac3;">YBC (Manager) [ybc_manager]</strong>
+		<span style="color:#AEAEAE;"> &nbsp; | &nbsp; 
+                  <a href="http://localhost:8001/ybc/user/password_edit">Ubah Password</a>                  &nbsp; | &nbsp; <a href="#" onClick='confirm_logout("http://localhost:8001/ybc/logout")'>Sign Out</a>
+         		 <br />&nbsp;
+         </div>
+		          <div style="float:right;margin-left:5px;padding:7px;">         </div>
+		 		 
+		 <div style="clear:both;"></div>
+</div>
+
+
+
+<div class="menu_bar">
+<div style="text-align:right;" id="jag_time">Load time...</div>
+		
+<ul id="nav" class="dropdown dropdown-horizontal">
+<li id="mn_home"><a href="http://localhost:8001/ybc/"  class="dir" > &nbsp;  &nbsp; Depan &nbsp;  &nbsp; </a></li>
+<li><a href="./"  class="dir" >Transaksi 1</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 1</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/grpo/input" >Goods Receipt PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/input" >Goods Receipt PO STO From CW</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/input" >Goods Issue Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/input" >Goods Receipt Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/input" >Request untuk Non Standard Stock </a></li>
+<li class="mn_subtitle" ><span>TRANSFER DEPARTEMENT</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/input" >Goods Receipt PO From Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/input" >Transferring Difference Stock To Department</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/input" >Goods Issue Stock Transfer antar Departement</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/input" >Transaksi Produksi </a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/input" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/input" >Waste Material </a></li>
+<li><a href="http://localhost:8001/ybc/deletedata" >Reset/Hapus Data Stock</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 1</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/grpo/browse" >Goods Receipt PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/browse" >Goods Receipt PO STO With Delivery</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/browse" >Goods Issue Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/browse" >Goods Receipt Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/browse" >Request untuk Non Standard Stock </a></li>
+<li class="mn_subtitle" ><span>TRANSFER DEPARTEMENT</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/browse" >Goods Receipt PO From Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/browse" >Goods Issue Stock Transfer antar Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/browse" >Transferring Difference Stock To Department</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/browse" >Transaksi Produksi </a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/browse" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/browse" >Waste Material</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Transaksi 2</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/input" >Goods Transfer Request</a></li>
+<li><a href="http://localhost:8001/ybc/grfg/input" >GR FG di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/tssck/input" >Transfer Selisih Stock ke CW</a></li>
+<li><a href="http://localhost:8001/ybc/trend_utility/input" >Trend utility (usage)</a></li>
+<li><a href="http://localhost:8001/ybc/grpofg/input" >GR PO STO & GR FG Pastry/Cookies dr CK</a></li>
+<li><a href="http://localhost:8001/ybc/twts/input" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/input" >End Of Day</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/browse" >Goods Transfer Request</a></li>
+<li><a href="http://localhost:8001/ybc/grfg/browse" >GR FG di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/tssck/browse" >Transfer Selisih Stock ke CW</a></li>
+<li><a href="http://localhost:8001/ybc/trend_utility/browse" >Trend utility (usage)</a></li>
+<li><a href="http://localhost:8001/ybc/grpofg/browse" >GR PO STO & GR FG Pastry/Cookies dr CK</a></li>
+<li><a href="http://localhost:8001/ybc/twts/browse" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/browse" >End Of Day</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Master Data</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/user/input" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_add" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/sfgs/input" >Master Semi Finished Goods (SFG) BOM</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/input" >Master Item Opname Daily</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/input" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/input" >Bill Of Materials Master</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/posisi/browse" >Integration Log</a></li>
+<li><a href="http://localhost:8001/ybc/user/browse" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_browse" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/sfgs/browse" >Master Semi Finished Goods (SFG) BOM</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/browse" >Master Item Opname Daily</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/browse" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/browse" >Paket</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Report</a>
+		
+		<ul>
+<li class="mn_subtitle" ><span>STOCK</span></li>
+<li><a href="http://localhost:8001/ybc/dispnonstdstock/browse" >Display Standard Stock di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/kodematerial/browse" >List Material Document</a></li>
+<li><a href="http://localhost:8001/ybc/listoutstanding/browse" >List Outstanding PR/PO/Delivery vs Stock vs Requirements</a></li>
+<li><a href="http://localhost:8001/ybc/summwebdoc/browse" >Material Document Summary</a></li>
+<li><a href="http://localhost:8001/ybc/stockstatus/browse" >Status Stock Opname</a></li>
+<li><a href="http://localhost:8001/ybc/prstodlvgr/browse" >PR STO vs DO vs Goods Receipt</a></li>
+<li><a href="http://localhost:8001/ybc/varianceoutlet/browse" >Variance Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/uploadrptvariance/browse" >Upload Report Variance Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/rpt_waste/input" >Waste</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Download</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/download" >Template (Excel)</a></li>
+</ul>
+		
+</li>
+<li id="mn_end">&nbsp;</li></ul>
+<div style="clear:both;"></div>
+</div>
+
+
+
+<div class="wrapper">
+
+<div align="center" class="page_title">Production Transaction</div>
+<p>&nbsp;</p>
+<form action="http://localhost:8001/ybc/tpaket/input2/all/1#table2" method="post" name="form1" id="form1"><input type="hidden" name="tpaket_header[id_tpaket_header]" id="tpaket_header[id_tpaket_header]" value="all" /><table width="1038" border="0" align="center">
+	<tr>
+		<td width="272" class="table_field_1"><strong>Goods Receipt No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td width="272" class="table_field_1"><strong>Goods Issue No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Plant</strong></td>
+		<td class="column_input">01 - General Warehouse</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Storage Location </strong> </td>
+		<td class="column_input">01 - General Warehouse</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Status </strong></td>
+		<td class = "column_input"><strong>Not Approved</strong></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Material Group</strong></td>
+		<td class="column_input"><input type="hidden" name="item_group[item_group_code]" id="item_group[item_group_code]" value="all" />all<input type="hidden" name="tpaket_header[item_group_code]" id="tpaket_header[item_group_code]" value="all" /></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Posting Date </strong></td>
+<!--		<td class="column_input">17-04-2017</td>//-->
+		<td class="column_input">        <input type="text" name="tpaket_header[posting_date]" id="tpaket_header[posting_date]" value="13-08-2016" class="input_text" size="10" /> <script language="JavaScript">
+					new tcal ({
+						// form name
+						'formname': 'form1',
+						// input name
+						'controlname': 'tpaket_header[posting_date]'
+					});
+		</script></td>
+	</tr>
+     <tr>
+		<td class="table_field_1"><strong>Material No</strong></td>
+        <td class = "column_input" >
+		<select name="tpaket_detail[material_no]" id="tpaket_detail[material_no]" class="input_text" onChange="document.form1.submit();" >
+<option value="" selected="selected"></option>
+<option value="1AG0001">1AG0001 - Avocado Genoa 20x10</option>
+</select>       
+        </td>
+	</tr>
+    <tr>
+		<td class="table_field_1"><strong>BOM Quantity</strong></td>
+        <td class = "column_input" >
+                </td>
+     </tr>
+     <tr>
+		<td class="table_field_1"><strong>Quantity</strong></td>
+        <td class = "column_input" >
+		<input type="text" name="tpaket_detail[qty][1]" id="tpaket_detail[qty][1]" value="" class="input_number" size="8" />        
+        </td>
+	</tr>
+    <tr>
+   <td class="table_field_1"><strong>UOM</strong></td>
+        <td class = "column_input" >
+    	 
+       
+    </td>
+    </tr>
+</table>
+<table width="1038" border="0" align="center" id="table2">
+	<tr bgcolor="#999999">
+		<td class="table_header_1"><div align="center">&nbsp;</div></td>
+		<td class="table_header_1"><div align="center"><strong>No.</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Material No</strong></div></td>
+		  <td class="table_header_1"><div align="center"><strong>Batch Number</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Quantity</strong></div></td>
+        <td class="table_header_1"><div align="center"><strong>Total Quantity</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Uom</strong></div></td>
+			</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td align="center"><input type="hidden" name="tpaket_detail[id_tpaket_h_detail][1]" id="tpaket_detail[id_tpaket_h_detail][1]" value="1" />1</td>
+		
+        <td align="center">
+                 
+        </td>
+         <td align="center">
+         <center>--------</center>        
+        </td>
+		<td align="center">
+		<input type="text" name="tpaket_detail[quantity][1]" id="tpaket_detail[quantity][1]" value=""  />		</td>
+        <td align="center">
+        <input type="text" name="tpaket_detail[quantity_total][1]" id="tpaket_detail[quantity_total][1]" value="0"  />		</td>
+		<td>
+                </td>
+	</tr>
+
+</table>
+<table width="430" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" align="center">
+        <input type="image" name="button[add]" id="" value="Tambah" src="http://localhost:8001/ybc/images/jadditem.png"  />        <input name="button[delete]" id="" type="image" src="http://localhost:8001/ybc/images/jdeleteitem.png" onClick="document.form1.submit();"> </td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table width="300" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center"> <input type="image" name="button[save]" id="" value="Save" src="http://localhost:8001/ybc/images/jbtnsave.png"  />                <input type="image" name="button[approve]" id="" value="Approve" src="http://localhost:8001/ybc/images/jbtnapprove.png"  />                        <a href="#" onclick="window.open('http://localhost:8001/ybc/help/Transaksi Paket.htm','popup','left=900 height=600,width=800,scrollbars=yes'); return(false);">
+        <img src="http://localhost:8001/ybc/images/help.png"></a>
+         </td>
+	</tr>
+	<tr>
+    <td align="center">&nbsp;</td>
+	</tr>
+	<tr>
+    <td align="center"><a href="http://localhost:8001/ybc/tpaket/browse">Back</a></td>
+	</tr>
+</table>
+
+</form></div>
+<div id="jagfoot">
+&copy;2017 YBC Software &mdash; Indonesia. All rights reserved.
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+c:/absen.txt

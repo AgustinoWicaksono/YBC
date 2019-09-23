@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELN` AS `EBELN`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELP` AS `EBELP`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`VENDOR` AS `VENDOR`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`VENDOR_NAME` AS `VENDOR_NAME`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MATNR` AS `MATNR`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MAKTX` AS `MAKTX`,(`sap_php`.`zmm_bapi_disp_po_outstanding`.`BSTMG` - coalesce((select sum(`sap_php`.`t_grpo_detail`.`gr_quantity`) AS `SUM(gr_quantity)` from (`sap_php`.`t_grpo_detail` join `sap_php`.`t_grpo_header` on((`sap_php`.`t_grpo_detail`.`id_grpo_header` = `sap_php`.`t_grpo_header`.`id_grpo_header`))) where (`sap_php`.`t_grpo_header`.`po_no` = `sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELN`)),0)) AS `BSTMG`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`BSTME` AS `BSTME`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MATKL` AS `MATKL`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`DISPO` AS `DISPO`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`UNIT` AS `UNIT`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`UNIT_STEXT` AS `UNIT_STEXT`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`DELIV_DATE` AS `DELIV_DATE` from `sap_php`.`zmm_bapi_disp_po_outstanding`
+md5=d109a33336e249125a033f01ec471839
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=2
+with_check_option=0
+timestamp=2016-08-08 04:35:53
+create-version=1
+source=SELECT EBELN,EBELP,VENDOR,VENDOR_NAME,\n                         MATNR,MAKTX,BSTMG-COALESCE((SELECT SUM(gr_quantity) FROM t_grpo_detail \n						 JOIN t_grpo_header ON t_grpo_detail.id_grpo_header = t_grpo_header.id_grpo_header\n						 where t_grpo_header.po_no  = EBELN),0) AS BSTMG,BSTME,\n                         MATKL,DISPO,UNIT,UNIT_STEXT,DELIV_DATE\n                         FROM\n                         ZMM_BAPI_DISP_PO_OUTSTANDING
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select `sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELN` AS `EBELN`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELP` AS `EBELP`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`VENDOR` AS `VENDOR`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`VENDOR_NAME` AS `VENDOR_NAME`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MATNR` AS `MATNR`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MAKTX` AS `MAKTX`,(`sap_php`.`zmm_bapi_disp_po_outstanding`.`BSTMG` - coalesce((select sum(`sap_php`.`t_grpo_detail`.`gr_quantity`) AS `SUM(gr_quantity)` from (`sap_php`.`t_grpo_detail` join `sap_php`.`t_grpo_header` on((`sap_php`.`t_grpo_detail`.`id_grpo_header` = `sap_php`.`t_grpo_header`.`id_grpo_header`))) where (`sap_php`.`t_grpo_header`.`po_no` = `sap_php`.`zmm_bapi_disp_po_outstanding`.`EBELN`)),0)) AS `BSTMG`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`BSTME` AS `BSTME`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`MATKL` AS `MATKL`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`DISPO` AS `DISPO`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`UNIT` AS `UNIT`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`UNIT_STEXT` AS `UNIT_STEXT`,`sap_php`.`zmm_bapi_disp_po_outstanding`.`DELIV_DATE` AS `DELIV_DATE` from `sap_php`.`zmm_bapi_disp_po_outstanding`

@@ -1,0 +1,225 @@
+<?php
+$this->load->helper('form');
+$this->lang->load('g_general', $this->session->userdata('lang_name'));
+$this->lang->load('g_button', $this->session->userdata('lang_name'));
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Attendance Detail: <?php echo $this->session->userdata['ADMIN']['storage_location_name'];?> (<?=$date_from;?> to <?=$date_to;?>)</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!-- Start of menu and main CSS //-->
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>css/<?=$this->session->userdata('template');?>/<?=$this->session->userdata('lang_name');?>/cssplay.css" />
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>css/<?=$this->session->userdata('template');?>/<?=$this->session->userdata('lang_name');?>/main.css" />
+
+<style type="text/css" title="currentStyle">
+<?php /*	@import "<?=base_url();?>css/demo_page.css"; */ ?>
+	@import "<?=base_url();?>css/jquery.dataTables_themeroller.css";
+	@import "<?=base_url();?>css/ui-lightness/jquery-ui-1.8.4.custom.css";
+	@import "<?=base_url();?>css/TableTools.css";
+</style>
+<script type="text/javascript" language="javascript" src="<?=base_url();?>js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="<?=base_url();?>js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="<?=base_url();?>js/TableTools.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).ready( function () {
+	$('#JAGTable tr').click( function() {
+		$(this).toggleClass('row_selected');
+	} );
+    var oTable = $('#JAGTable').dataTable( {
+		"bJQueryUI": true,
+		  "bPaginate": false,
+		  "bFilter": true,
+		  "sScrollY": "400px",
+		  "sScrollX": "100%",
+		  "sScrollXInner": "100%",
+		  "bScrollCollapse": true,
+			"sDom": '<"H"Tfr>t<"F"ip>',
+			"oTableTools": {
+				"sSwfPath": "<?=base_url();?>js/swf/copy_csv_xls_pdf.swf",
+				"aButtons": [
+				"copy",
+				"csv",
+				"xls",
+				{
+					"sExtends": "pdf",
+					"sPdfOrientation": "landscape",
+					"sPdfMessage": "Tgl cetak: <?php echo date('Ymd-His'); ?> oleh: <?php echo $this->session->userdata['ADMIN']['admin_username']; ?>"
+				},
+				"print"
+				]
+			}
+
+    } );
+} );
+</script>
+
+</head>
+<body>
+<div align="center" class="page_title"><?=$page_title;?></div>
+<p></p>
+<table>
+	<tr>
+		<td width="200"><b>Cabang</b></td>
+		<td><?php echo $this->session->userdata['ADMIN']['plant_name'];?> / <?php echo $this->session->userdata['ADMIN']['storage_location_name'];?> / <?php echo $this->session->userdata['ADMIN']['plant'];?></td>
+	</tr>
+	<tr>
+		<td><b>Nama Karyawan</b></td>
+		<td><?php
+		if (trim($data['employee']['nama'])=='') echo '<b>ALL</b>'; else echo $data['employee']['nama'];?></td>
+	</tr>
+  <tr>
+    <td><strong>Tanggal</strong></td>
+		<td>Dari <?=$date_from;?> s/d <?=$date_to;?></td>
+	</tr>
+  <tr>
+    <td><strong>Waktu Pembaruan Data:</strong></td>
+		<td style="color:#AA1122;"><?=$this->m_employee_attn->data_last_update();?></td>
+	</tr>
+</table>
+<p></p>
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="JAGTable" width="100%">
+<thead>
+	<tr>
+<?php /*		<th>Cabang</th> */ ?>
+		<th>NIK</th>
+		<th>Nama Karyawan</th>
+		<th>Tanggal</th>
+		<th>Shift</th>
+		<th>Shift In</th>
+		<th>Shift Break Out</th>
+		<th>Shift Break In</th>
+		<th>Shift Out</th>
+		<th>Kode Absensi</th>
+		<th>In</th>
+		<th>Break Out</th>
+		<th>Break In</th>
+		<th>Out</th>
+		<th>Total Break</th>
+		<th>Terlambat</th>
+		<th>Pulang Cepat</th>
+		<th>Jam Kerja</th>
+  </tr>
+</thead>
+<tbody>
+<?php
+//$attn1 =  $data['attns']->result_array();
+//echo '<pre>';
+//print_r($attn1);
+//echo '</pre>';
+
+if($data['attns'] != FALSE) :
+	$i = 1;
+	foreach ($data['attns']->result_array() as $attn):
+
+//		$nama = $this->m_employee->employee_select_by_nik($attn['nik'], 'nama');
+//echo $nama;
+		$shift_in_int = strtotime($attn['shift_in']);
+		$shift_out_int = strtotime($attn['shift_out']);
+
+   	    $in_int = strtotime($attn['in']);
+   		$out_int = strtotime($attn['out']);
+
+		$shift_break_in_int = strtotime($attn['shift_break_in']);
+		$shift_break_out_int = strtotime($attn['shift_break_out']);
+
+		$break_in_int = strtotime($attn['break_in']);
+		$break_out_int = strtotime($attn['break_out']);
+
+		$terlambat_int = ($in_int / 60) - ($shift_in_int / 60);
+		$pulang_cepat_int = ($shift_out_int / 60) - ($out_int / 60);
+		$total_break_int = ($break_in_int / 60) - ($break_out_int / 60);
+
+		if(($terlambat_int < 0) || ($attn['kd_shift']=='') || ($attn['kd_shift']=='0'))
+			$terlambat_int = 0;
+
+		if(($pulang_cepat_int < 0) || ($attn['kd_shift']=='') || ($attn['kd_shift']=='0'))
+			$pulang_cepat_int = 0;
+
+		if($total_break_int < 0)
+			$total_break_int = 0;
+
+   		$jam_kerja_int  = (($out_int - $in_int) / 60) - $total_break_int;
+
+		if(($jam_kerja_int < 0) || ($attn['in'] == '00:00:00') || ($attn['out'] == '00:00:00'))
+			$jam_kerja_int = 0;
+
+        if ($jam_kerja_int < 60)
+  		  $jam_kerja = '00:'.number_format($jam_kerja_int, 0, '.', ',');
+        else
+   		  $jam_kerja = number_format($jam_kerja_int / 60, 0, '.', ',').':'.number_format(fmod($jam_kerja_int,60), 0, '.', ',');
+
+        if ($total_break_int < 60)
+  		  $total_break = number_format($total_break_int, 0, '.', ',').' menit';
+        else
+  		  $total_break = number_format($total_break_int / 60, 0, '.', ',').' jam '.number_format(fmod($total_break_int,60), 0, '.', ',').' menit';
+
+        if ($terlambat_int < 60)
+  		  $terlambat = number_format($terlambat_int, 0, '.', ',').' menit';
+        else
+   		  $terlambat = number_format($terlambat_int / 60, 0, '.', ',').' jam '.number_format(fmod($terlambat_int,60), 0, '.', ',').' menit';
+
+        if ($pulang_cepat_int < 60)
+  		  $pulang_cepat = number_format($pulang_cepat_int, 0, '.', ',').' menit';
+        else
+   		  $pulang_cepat = number_format($pulang_cepat_int / 60, 0, '.', ',').' jam '.number_format(fmod($pulang_cepat_int,60), 0, '.', ',').' menit';
+
+        $in = substr($attn['in'], 0, 5);
+        $break_out = substr($attn['break_out'], 0, 5);
+        $break_in = substr($attn['break_in'], 0, 5);
+        $out = substr($attn['out'], 0, 5);
+        if ($in == '00:00')
+          $in = '';
+        if ($break_out == '00:00')
+          $break_out = '';
+        if ($break_in == '00:00')
+          $break_in = '';
+        if ($out == '00:00')
+          $out = '';
+
+        $shift_in = substr($attn['shift_in'], 0, 5);
+        $shift_break_out = substr($attn['shift_break_out'], 0, 5);
+        $shift_break_in = substr($attn['shift_break_in'], 0, 5);
+        $shift_out = substr($attn['shift_out'], 0, 5);
+        if ($shift_in == '00:00')
+          $shift_in = '';
+        if ($shift_break_out == '00:00')
+          $shift_break_out = '';
+        if ($shift_break_in == '00:00')
+          $shift_break_in = '';
+        if ($shift_out == '00:00')
+          $shift_out = '';
+?>
+<?php if($i % 2) : ?>
+  <tr class="table_row_1">
+<?php else : ?>
+  <tr class="table_row_2">
+<?php endif; ?>
+<?php /*				<td><?=$attn['cabang'];?></td> */ ?>
+		<td><?=$attn['nik'];?></td>
+		<td><?=$attn['nama'];?></td>
+		<td><?=$attn['tanggal'];?></td>
+		<td><?=$attn['kd_shift'];?></td>
+		<td><?=$shift_in;?></td>
+		<td><?=$shift_break_out;?></td>
+		<td><?=$shift_break_in;?></td>
+		<td><?=$shift_out;?></td>
+		<td><?=$attn['kd_aktual'];?></td>
+		<td><?=$in;?></td>
+		<td><?=$break_out;?></td>
+		<td><?=$break_in;?></td>
+		<td><?=$out;?></td>
+		<td><?=$total_break;?></td>
+		<td><?=$terlambat;?></td>
+		<td><?=$pulang_cepat;?></td>
+		<td><?=$jam_kerja;?></td>
+  </tr>
+  <?php
+		$i++;
+	endforeach;
+endif;
+?>
+</tbody>
+</table>
+
+</body>

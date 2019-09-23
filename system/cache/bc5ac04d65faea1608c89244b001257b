@@ -1,0 +1,226 @@
+1493791601TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ID" lang="ID" >
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="id" />
+<meta http-equiv="Copyright" content="YBC" />
+<meta http-equiv="Author" content="YBC" />
+<meta name="rating" content="General" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 26 Jul 1997 05:00:00 GMT" />
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Production Transaction - YBC SAP Portal | Alam Sutera Manager</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" type="image/png" href="http://localhost:8001/ybc/favicon.png">
+<!-- Start of menu and main CSS //-->
+<style type="text/css">@import url(http://localhost:8001/ybc/css/swebee.css?v=59);</style>
+<link rel="stylesheet" type="text/css" href="http://localhost:8001/ybc/css/main.css?v=59" />
+<link href="http://localhost:8001/ybc/css/dropdown.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.ultimate.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+
+<!-- End of menu and main CSS //-->
+<script src="http://localhost:8001/ybc/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var jagservtime = new Date(17,5,3,12,36,41);
+</script>
+<script src="http://localhost:8001/ybc/js/time.js" type="text/javascript"></script>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+	function confirm_logout(url) {
+		var m = confirm('Apakah Anda benar-benar ingin logout?');
+		if(m) {
+			location.href=url;
+		}
+	}
+//-->
+</script>
+
+</head>
+
+<body>
+<div id="jaghead" class="swbbodyb">
+    	<div style="float:left;margin-right:5px;padding:5px;height:70px;">
+		<div style="float:left;margin-right:5px;">
+		
+        <img src="http://localhost:8001/ybc/images/ybc-logo-small.png" border="0" alt="" />
+		</div>
+		<div style="float:left;margin-right:15px;">
+		
+         <strong style="font-size:120%;">Alam Sutera - Pastry</strong><br />
+		 <a href="http://localhost:8001/ybc/store">Alam Sutera - Pastry</a> / 0201AS		
+         <span class="jchange"><a href="http://localhost:8001/ybc/plant/change/wo" title="Ganti Outlet">Ganti Outlet</a></span>
+		 
+         </div>
+	</div>
+             		<div style="border-left:#778899 2px solid;float:left;margin-right:5px;padding:7px;"><div class="jag_title">YBC SAP Portal</div>
+                        <br /><div style="float:left;margin-top:-1px;margin-right:3px;"><img src="http://localhost:8001/ybc/images/user.png" alt="" border="0" /></div> <strong style="color:#337ac3;">Alam Sutera Manager [SX_Alam]</strong>
+		<span style="color:#AEAEAE;"> &nbsp; | &nbsp; 
+                  <a href="http://localhost:8001/ybc/user/password_edit">Ubah Password</a>                  &nbsp; | &nbsp; <a href="#" onClick='confirm_logout("http://localhost:8001/ybc/logout")'>Sign Out</a>
+         		 <br />&nbsp;
+         </div>
+		          <div style="float:right;margin-left:5px;padding:7px;">         </div>
+		 		 
+		 <div style="clear:both;"></div>
+</div>
+
+
+
+<div class="menu_bar">
+<div style="text-align:right;" id="jag_time">Load time...</div>
+		
+<ul id="nav" class="dropdown dropdown-horizontal">
+<li id="mn_home"><a href="http://localhost:8001/ybc/"  class="dir" > &nbsp;  &nbsp; Depan &nbsp;  &nbsp; </a></li>
+<li><a href="./"  class="dir" >Transaksi 1</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 1</a>
+		
+		<ul>
+<li class="mn_subtitle" ><span>EKSTERNAL</span></li>
+<li><a href="http://localhost:8001/ybc/grpo/input" >In PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/input" >In DO From CW</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/input" >Out Antar Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/input" >In Antar Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/input" >Purchase Request(PR) </a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/input" >Retur</a></li>
+<li class="mn_subtitle" ><span>INTERNAL</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/input" >In Antar Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/input" >Out Antar Departement</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/input" >Transaksi Produksi </a></li>
+<li><a href="http://localhost:8001/ybc/wo/input" >Work Order</a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/input" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/input" >Spoiled / Breakage / Lost </a></li>
+<li><a href="http://localhost:8001/ybc/deletedata" >Reset/Hapus Data Stock</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 1</a>
+		
+		<ul>
+<li class="mn_subtitle" ><span>EKSTERNAL</span></li>
+<li><a href="http://localhost:8001/ybc/grpo/browse" >In PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/browse" >In DO from CW</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/browse" >Out Antar Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/browse" >In Antar Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/browse" >Retur</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/browse" >Purchase Request (PR)</a></li>
+<li class="mn_subtitle" ><span>INTERNAL</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/browse" >In Antar Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/browse" >Out Antar Departement</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/browse" >Transaksi Produksi </a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/browse" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/browse" >Spoiled / Breakage / Lost </a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Transaksi 2</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/input" >Store Room Request (SR)</a></li>
+<li><a href="http://localhost:8001/ybc/twts/input" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/input" >End Of Day</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/browse" >Store Room Request (SR)</a></li>
+<li><a href="http://localhost:8001/ybc/twts/browse" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/browse" >End Of Day</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Master Data</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/user/input" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_add" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/input" >Master Item Opname Inventory</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/input" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/input" >Master Bill Of Materials</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/posisi/browse" >Integration Log</a></li>
+<li><a href="http://localhost:8001/ybc/user/browse" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_browse" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/browse" >Master Item Opname Inventory</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/browse" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/browse" >Master Bill Of Materials</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li id="mn_end">&nbsp;</li></ul>
+<div style="clear:both;"></div>
+</div>
+
+
+
+<div class="wrapper">
+<div align="center" class="page_title">Production Transaction</div>
+<p>&nbsp;</p>
+<form action="http://localhost:8001/ybc/wo/input" method="post" name="form1" id="form1"><table width="1038" border="0" align="center">
+	<tr>
+		<td width="272" class="table_field_1"><strong>Goods Receipt No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Goods Issue No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Plant </strong></td>
+		<td class="column_input">0201AS - Alam Sutera - Pastry</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Storage Location</strong> </td>
+		<td class="column_input">0201AS - Alam Sutera - Pastry</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Status </strong></td>
+		<td class="column_input"><strong>Not Approved</strong></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Material Group </strong></td>
+		<td class="column_input">
+         <select name="item_group_code" id="item_group_code" class="input_text" onChange="document.form1.submit();">
+<option value="0"></option>
+<option value="all">==All==</option>
+<option value="" selected="selected"></option>
+</select>                  </td>
+	</tr>
+	    </table>
+</form></div>
+<div id="jagfoot">
+&copy;2017 YBC Software &mdash; Indonesia. All rights reserved.
+</div>
+</body>
+</html>

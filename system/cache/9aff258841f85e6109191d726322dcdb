@@ -1,0 +1,878 @@
+1485319486TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ID" lang="ID" >
+<head>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Language" content="id" />
+<meta http-equiv="Copyright" content="YBC" />
+<meta http-equiv="Author" content="YBC" />
+<meta name="rating" content="General" />
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 26 Jul 1997 05:00:00 GMT" />
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Transaksi Produksi - YBC SAP Portal | Alam Sutera Manager</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" type="image/png" href="http://localhost:8001/ybc/favicon.png">
+<!-- Start of menu and main CSS //-->
+<style type="text/css">@import url(http://localhost:8001/ybc/css/swebee.css?v=59);</style>
+<link rel="stylesheet" type="text/css" href="http://localhost:8001/ybc/css/main.css?v=59" />
+<link href="http://localhost:8001/ybc/css/dropdown.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://localhost:8001/ybc/css/default.ultimate.css?v=59" media="screen" rel="stylesheet" type="text/css" />
+
+<!-- End of menu and main CSS //-->
+<script src="http://localhost:8001/ybc/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var jagservtime = new Date(17,1,25,11,14,46);
+</script>
+<script src="http://localhost:8001/ybc/js/time.js" type="text/javascript"></script>
+
+
+<script language="javascript" type="text/javascript">
+<!--
+	function confirm_logout(url) {
+		var m = confirm('Apakah Anda benar-benar ingin logout?');
+		if(m) {
+			location.href=url;
+		}
+	}
+//-->
+</script>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8001/ybc/css/default/indonesian/calendar.css" />
+	<script language="javascript" type="text/javascript">
+	var A_TCALDEF = {
+		'months' : ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
+		
+		'weekdays' : ['M', 'S', 'S', 'R', 'K', 'J', 'S'],
+
+
+		'yearscroll': true, // show year scroller
+		'weekstart': 0, // first day of week: 0-Su or 1-Mo
+		'centyear'  : 70, // 2 digit years less than 'centyear' are in 20xx, othewise in 19xx.
+		'imgpath' : 'http://localhost:8001/ybc/js/calendar/default/indonesian/img/' // directory with calendar images
+	}
+
+	</script>
+	<script language="javascript" type="text/javascript" src="http://localhost:8001/ybc/js/tigracalendar.js"></script>
+</head>
+
+<body>
+<div id="jaghead" class="swbbodyb">
+    	<div style="float:left;margin-right:5px;padding:5px;height:70px;">
+		<div style="float:left;margin-right:5px;">
+		
+        <img src="http://localhost:8001/ybc/images/ybc-logo-small.png" border="0" alt="" />
+		</div>
+		<div style="float:left;margin-right:15px;">
+		
+         <strong style="font-size:120%;">Alam Sutera - Pastry</strong><br />
+		 <a href="http://localhost:8001/ybc/store">Alam Sutera - Pastry</a> / 0201AS		
+         <span class="jchange"><a href="http://localhost:8001/ybc/plant/change/tpaket" title="Ganti Outlet">Ganti Outlet</a></span>
+		 
+         </div>
+	</div>
+             		<div style="border-left:#778899 2px solid;float:left;margin-right:5px;padding:7px;"><div class="jag_title">YBC SAP Portal</div>
+                        <br /><div style="float:left;margin-top:-1px;margin-right:3px;"><img src="http://localhost:8001/ybc/images/user.png" alt="" border="0" /></div> <strong style="color:#337ac3;">Alam Sutera Manager [SX_Alam]</strong>
+		<span style="color:#AEAEAE;"> &nbsp; | &nbsp; 
+                  <a href="http://localhost:8001/ybc/user/password_edit">Ubah Password</a>                  &nbsp; | &nbsp; <a href="#" onClick='confirm_logout("http://localhost:8001/ybc/logout")'>Sign Out</a>
+         		 <br />&nbsp;
+         </div>
+		          <div style="float:right;margin-left:5px;padding:7px;">         </div>
+		 		 
+		 <div style="clear:both;"></div>
+</div>
+
+
+
+<div class="menu_bar">
+<div style="text-align:right;" id="jag_time">Load time...</div>
+		
+<ul id="nav" class="dropdown dropdown-horizontal">
+<li id="mn_home"><a href="http://localhost:8001/ybc/"  class="dir" > &nbsp;  &nbsp; Depan &nbsp;  &nbsp; </a></li>
+<li><a href="./"  class="dir" >Transaksi 1</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 1</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/grpo/input" >Goods Receipt PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/input" >Goods Receipt PO STO From CW</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/input" >Goods Issue Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/input" >Goods Receipt Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/input" >Request untuk Non Standard Stock </a></li>
+<li class="mn_subtitle" ><span>TRANSFER DEPARTEMENT</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/input" >Goods Receipt PO From Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/input" >Transferring Difference Stock To Department</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/input" >Goods Issue Stock Transfer antar Departement</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/input" >Transaksi Produksi </a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/input" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/input" >Waste Material </a></li>
+<li><a href="http://localhost:8001/ybc/deletedata" >Reset/Hapus Data Stock</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 1</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/grpo/browse" >Goods Receipt PO from Vendor</a></li>
+<li><a href="http://localhost:8001/ybc/grpodlv/browse" >Goods Receipt PO STO With Delivery</a></li>
+<li><a href="http://localhost:8001/ybc/gisto/browse" >Goods Issue Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/grsto/browse" >Goods Receipt Stock Transfer antar Plant</a></li>
+<li><a href="http://localhost:8001/ybc/nonstdstock/browse" >Request untuk Non Standard Stock </a></li>
+<li class="mn_subtitle" ><span>TRANSFER DEPARTEMENT</span></li>
+<li><a href="http://localhost:8001/ybc/grpodlv_dept/browse" >Goods Receipt PO From Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gistonew_dept/browse" >Goods Issue Stock Transfer antar Departement</a></li>
+<li><a href="http://localhost:8001/ybc/gisto_dept/browse" >Transferring Difference Stock To Department</a></li>
+<li class="mn_subtitle" ><span>PRODUKSI</span></li>
+<li><a href="http://localhost:8001/ybc/tpaket/browse" >Transaksi Produksi </a></li>
+<li class="mn_subtitle" ><span>STOCK OUTLET</span></li>
+<li><a href="http://localhost:8001/ybc/stockoutlet/browse" >Stock Opname </a></li>
+<li><a href="http://localhost:8001/ybc/waste/browse" >Waste Material</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Transaksi 2</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/input" >Goods Transfer Request</a></li>
+<li><a href="http://localhost:8001/ybc/grfg/input" >GR FG di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/tssck/input" >Transfer Selisih Stock ke CW</a></li>
+<li><a href="http://localhost:8001/ybc/trend_utility/input" >Trend utility (usage)</a></li>
+<li><a href="http://localhost:8001/ybc/grpofg/input" >GR PO STO & GR FG Pastry/Cookies dr CK</a></li>
+<li><a href="http://localhost:8001/ybc/twts/input" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/input" >End Of Day</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Data Transaksi 2</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/stdstock/browse" >Goods Transfer Request</a></li>
+<li><a href="http://localhost:8001/ybc/grfg/browse" >GR FG di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/tssck/browse" >Transfer Selisih Stock ke CW</a></li>
+<li><a href="http://localhost:8001/ybc/trend_utility/browse" >Trend utility (usage)</a></li>
+<li><a href="http://localhost:8001/ybc/grpofg/browse" >GR PO STO & GR FG Pastry/Cookies dr CK</a></li>
+<li><a href="http://localhost:8001/ybc/twts/browse" >Transaksi Pemotongan Whole di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/posinc/browse" >End Of Day</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Master Data</a>
+		
+		<ul>
+<li><a href="./"  class="dir" >Input Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/user/input" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_add" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/sfgs/input" >Master Semi Finished Goods (SFG) BOM</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/input" >Master Item Opname Daily</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/input" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/input" >Bill Of Materials Master</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >List Master Data</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/user/browse" >Manajemen Pengguna</a></li>
+<li><a href="http://localhost:8001/ybc/perm/group_browse" >Hak Akses</a></li>
+<li><a href="http://localhost:8001/ybc/sfgs/browse" >Master Semi Finished Goods (SFG) BOM</a></li>
+<li><a href="http://localhost:8001/ybc/opnd/browse" >Master Item Opname Daily</a></li>
+<li><a href="http://localhost:8001/ybc/mwts/browse" >Master Konversi Item Whole ke Slice</a></li>
+<li><a href="http://localhost:8001/ybc/mpaket/browse" >Paket</a></li>
+</ul>
+		
+</li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Report</a>
+		
+		<ul>
+<li class="mn_subtitle" ><span>STOCK</span></li>
+<li><a href="http://localhost:8001/ybc/dispnonstdstock/browse" >Display Standard Stock di Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/kodematerial/browse" >List Material Document</a></li>
+<li><a href="http://localhost:8001/ybc/listoutstanding/browse" >List Outstanding PR/PO/Delivery vs Stock vs Requirements</a></li>
+<li><a href="http://localhost:8001/ybc/summwebdoc/browse" >Material Document Summary</a></li>
+<li><a href="http://localhost:8001/ybc/stockstatus/browse" >Status Stock Opname</a></li>
+<li><a href="http://localhost:8001/ybc/prstodlvgr/browse" >PR STO vs DO vs Goods Receipt</a></li>
+<li><a href="http://localhost:8001/ybc/varianceoutlet/browse" >Variance Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/uploadrptvariance/browse" >Upload Report Variance Outlet</a></li>
+<li><a href="http://localhost:8001/ybc/rpt_waste/input" >Waste</a></li>
+</ul>
+		
+</li>
+<li><a href="./"  class="dir" >Download</a>
+		
+		<ul>
+<li><a href="http://localhost:8001/ybc/download" >Template (Excel)</a></li>
+</ul>
+		
+</li>
+<li id="mn_end">&nbsp;</li></ul>
+<div style="clear:both;"></div>
+</div>
+
+
+
+<div class="wrapper">
+
+<div align="center" class="page_title">Edit Transaksi Produksi</div>
+<p>&nbsp;</p>
+<form action="http://localhost:8001/ybc/tpaket/edit/108/all/2#table2" method="post" name="form1" id="form1"><input type="hidden" name="tpaket_header[id_tpaket_header]" id="tpaket_header[id_tpaket_header]" value="108" /><table width="1038" border="0" align="center">
+	<tr>
+		<td width="272" class="table_field_1"><strong>Goods Receipt No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td width="272" class="table_field_1"><strong>Goods Issue No.</strong></td>
+		<td class="column_input"><em>(Auto Number after Posting to SAP)</em></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Plant</strong></td>
+		<td class="column_input">0201AS - Alam Sutera - Pastry</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Storage Location </strong> </td>
+		<td class="column_input">0201AS - Alam Sutera - Pastry</td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Status </strong></td>
+		<td class = "column_input"><strong>Not Approved</strong></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Material Group</strong></td>
+		<td class="column_input"><input type="hidden" name="item_group[item_group_code]" id="item_group[item_group_code]" value="all" />all<input type="hidden" name="tpaket_header[item_group_code]" id="tpaket_header[item_group_code]" value="all" /></td>
+	</tr>
+	<tr>
+		<td class="table_field_1"><strong>Posting Date </strong></td>
+<!--		<td class="column_input">24-01-2017</td>//-->
+		<td class="column_input">        <input type="text" name="tpaket_header[posting_date]" id="tpaket_header[posting_date]" value="24-01-2017" class="input_text" size="10" /> <script language="JavaScript">
+					new tcal ({
+						// form name
+						'formname': 'form1',
+						// input name
+						'controlname': 'tpaket_header[posting_date]'
+					});
+		</script></td>
+	</tr>
+     <tr>
+		<td class="table_field_1"><strong>Material No</strong></td>
+        <td class = "column_input" >
+		<select name="tpaket_detail[material_no]" id="tpaket_detail[material_no]" class="input_text" onChange="document.form1.submit();" >
+<option value=""></option>
+<option value="1WP0704" selected="selected">1WP0704 - Almond Dark Crunchy Dough</option>
+<option value="1WPP153">1WPP153 - Almond Dark Crunchy Dough (Plastik)</option>
+<option value="1CK0362">1CK0362 - Almond Fancy Box</option>
+<option value="1WP0498">1WP0498 - Almond Sable Bakel Dough</option>
+<option value="1WPC012">1WPC012 - Almond Sable Fancy (B)</option>
+<option value="1WPP018">1WPP018 - Almond Sable Fancy (Plastik)</option>
+<option value="1WPC346">1WPC346 - Almond sable GPM & Gourmet (B)</option>
+<option value="1PR0022">1PR0022 - Almond Stick</option>
+<option value="1WPP098">1WPP098 - Almond Stick Praline (Primer)</option>
+<option value="1WP0586">1WP0586 - Almond Stick Praline Dough</option>
+<option value="1WP0491">1WP0491 - Angel Cookies Bakel Dough</option>
+<option value="1CK0383">1CK0383 - Angel Cookies Fancy</option>
+<option value="1WPC001">1WPC001 - Angel Cookies Fancy (B)</option>
+<option value="1WPP073">1WPP073 - Angel Cookies Fancy (Plastik)</option>
+<option value="1CK0262">1CK0262 - Apricot Macaroon</option>
+<option value="1WPC271">1WPC271 - Apricot Macaroon (B)</option>
+<option value="1WPP128">1WPP128 - Apricot Macaroon Cookies (Primer)</option>
+<option value="1WP0442">1WP0442 - Apricot Macaroon Dough</option>
+<option value="1WPP266">1WPP266 - Avocado Genoa  20x10 (Primer)</option>
+<option value="1WPP265">1WPP265 - Avocado Genoa  20x20 (Primer)</option>
+<option value="1WPP264">1WPP264 - Avocado Genoa  20x30 (Primer)</option>
+<option value="1WPP263">1WPP263 - Avocado Genoa  30x30 (Primer)</option>
+<option value="1WPP262">1WPP262 - Avocado Genoa  40x30 (Primer)</option>
+<option value="1WPP261">1WPP261 - Avocado Genoa  40x40 (Primer)</option>
+<option value="1WPP260">1WPP260 - Avocado Genoa  60x40 (Primer)</option>
+<option value="1WPP267">1WPP267 - Avocado Genoa  D20 (Primer)</option>
+<option value="1AG0001">1AG0001 - Avocado Genoa 20x10</option>
+<option value="1AG0003">1AG0003 - Avocado Genoa 20x20</option>
+<option value="1AG0004">1AG0004 - Avocado Genoa 20x30</option>
+<option value="1AG0005">1AG0005 - Avocado Genoa 30x30</option>
+<option value="1AG0006">1AG0006 - Avocado Genoa 30x40</option>
+<option value="1AG0007">1AG0007 - Avocado Genoa 40x40</option>
+<option value="1PRT171">1PRT171 - Avocado Genoa 4x8</option>
+<option value="1WPP268">1WPP268 - Avocado Genoa 4x8 (Primer)</option>
+<option value="1AG0008">1AG0008 - Avocado Genoa 60x40</option>
+<option value="1AG0002">1AG0002 - Avocado Genoa D20</option>
+<option value="1WP0413">1WP0413 - Avocado Mousse Dough</option>
+<option value="1WPP027">1WPP027 - Banana Macaroon Cookies (Primer)</option>
+<option value="1CK0234">1CK0234 - Banana Macaroon pcs (SN)</option>
+<option value="1WPP038">1WPP038 - Banana Macaroon Stick (Primer)</option>
+<option value="1PR0245">1PR0245 - Bar Large Dark</option>
+<option value="1WPP080">1WPP080 - Bar Large Dark (Primer)</option>
+<option value="1WP1161">1WP1161 - Bar Large Dark Dough</option>
+<option value="1PR0246">1PR0246 - Bar Large Milk</option>
+<option value="1WPP045">1WPP045 - Bar Large Milk (Primer)</option>
+<option value="1WP1097">1WP1097 - Bar Large Milk Dough</option>
+<option value="1PR0247">1PR0247 - Bar Large White</option>
+<option value="1WPP046">1WPP046 - Bar Large White (Primer)</option>
+<option value="1WP1098">1WP1098 - Bar Large White Dough</option>
+<option value="1PR0248">1PR0248 - Bar Long Dark</option>
+<option value="1WPP044">1WPP044 - Bar Long Dark (Primer)</option>
+<option value="1WP1096">1WP1096 - Bar Long Dark Dough</option>
+<option value="1PR0249">1PR0249 - Bar Long Milk</option>
+<option value="1WPP043">1WPP043 - Bar Long Milk (Primer)</option>
+<option value="1WP1095">1WP1095 - Bar Long Milk Dough</option>
+<option value="1PR0250">1PR0250 - Bar Long White</option>
+<option value="1WPP079">1WPP079 - Bar Long White (Primer)</option>
+<option value="1WP1159">1WP1159 - Bar Long White Dough</option>
+<option value="1PR0251">1PR0251 - Bar Short Dark</option>
+<option value="1WPP078">1WPP078 - Bar Short Dark (Primer)</option>
+<option value="1WP1158">1WP1158 - Bar Short Dark Dough</option>
+<option value="1PR0252">1PR0252 - Bar Short Milk</option>
+<option value="1WPP041">1WPP041 - Bar Short Milk (Primer)</option>
+<option value="1WP1093">1WP1093 - Bar Short Milk Dough</option>
+<option value="1PR0253">1PR0253 - Bar Short White</option>
+<option value="1WPP042">1WPP042 - Bar Short White (Primer)</option>
+<option value="1WP1094">1WP1094 - Bar Short White Dough</option>
+<option value="1WP1107">1WP1107 - Bear Milk Dough</option>
+<option value="1WP1106">1WP1106 - Bear White Dough</option>
+<option value="1CK0384">1CK0384 - Belgian Double Chocolate Chip Fancy</option>
+<option value="1WPP074">1WPP074 - Belgian Double Chocolate Chip Fancy (Plastik)</option>
+<option value="1WP1011">1WP1011 - Biscuit Base Peanut Butter Dough</option>
+<option value="1WPP154">1WPP154 - Biscuit Base Peanut Butter Dough (Plastik)</option>
+<option value="1WPP229">1WPP229 - Black Forest  20x10 (Primer)</option>
+<option value="1WPP228">1WPP228 - Black Forest  20x20 (Primer)</option>
+<option value="1WPP227">1WPP227 - Black Forest  20x30 (Primer)</option>
+<option value="1WPP226">1WPP226 - Black Forest  30x30 (Primer)</option>
+<option value="1WPP225">1WPP225 - Black Forest  40x30 (Primer)</option>
+<option value="1WPP224">1WPP224 - Black Forest  40x40 (Primer)</option>
+<option value="1WPP223">1WPP223 - Black Forest  60x40 (Primer)</option>
+<option value="1WPP230">1WPP230 - Black Forest  D20 (Primer)</option>
+<option value="1WPP231">1WPP231 - Black Forest  D6 (Primer)</option>
+<option value="1BF0002">1BF0002 - Black Forest 20cm Round</option>
+<option value="1BF0001">1BF0001 - Black Forest 20x10</option>
+<option value="1BF0003">1BF0003 - Black Forest 20x20</option>
+<option value="1BF0004">1BF0004 - Black Forest 20x30</option>
+<option value="1BF0005">1BF0005 - Black Forest 30x30</option>
+<option value="1BF0006">1BF0006 - Black Forest 30x40</option>
+<option value="1BF0007">1BF0007 - Black Forest 40x40</option>
+<option value="1BF0008">1BF0008 - Black Forest 40x60</option>
+<option value="1PRT001">1PRT001 - Black Forest portion</option>
+<option value="1WPC232">1WPC232 - Blondies 121 (B)</option>
+<option value="1WP0504">1WP0504 - Blondies dough</option>
+<option value="1WP1206">1WP1206 - Blue Fabri Dough</option>
+<option value="1PRT006">1PRT006 - Blueberry Cheese Cake</option>
+<option value="1BCC002">1BCC002 - Blueberry Cheese Cake 20cm round</option>
+<option value="1BCC001">1BCC001 - Blueberry Cheese Cake 20x10</option>
+<option value="1WPP212">1WPP212 - Blueberry Cheese Cake 20x10 (Primer)</option>
+<option value="1BCC004">1BCC004 - Blueberry Cheese Cake 20x20</option>
+<option value="1WPP211">1WPP211 - Blueberry Cheese Cake 20x20 (Primer)</option>
+<option value="1BCC003">1BCC003 - Blueberry Cheese Cake 20x30</option>
+<option value="1WPP210">1WPP210 - Blueberry Cheese Cake 20x30 (Primer)</option>
+<option value="1BCC005">1BCC005 - Blueberry Cheese Cake 30x30</option>
+<option value="1WPP209">1WPP209 - Blueberry Cheese Cake 30x30 (Primer)</option>
+<option value="1BCC006">1BCC006 - Blueberry Cheese Cake 30x40</option>
+<option value="1WPP208">1WPP208 - Blueberry Cheese Cake 40x30 (Primer)</option>
+<option value="1BCC007">1BCC007 - Blueberry Cheese Cake 40x40</option>
+<option value="1WPP207">1WPP207 - Blueberry Cheese Cake 40x40 (Primer)</option>
+<option value="1BCC008">1BCC008 - Blueberry Cheese Cake 40x60</option>
+<option value="1WPP214">1WPP214 - Blueberry Cheese Cake 4X8 (Primer)</option>
+<option value="1WPP206">1WPP206 - Blueberry Cheese Cake 60x40 (Primer)</option>
+<option value="1WPP213">1WPP213 - Blueberry Cheese Cake D20 (Primer)</option>
+<option value="1WPC280">1WPC280 - Blueberry Macaroon (B)</option>
+<option value="1WPP031">1WPP031 - Blueberry Macaroon Cookies (Primer)</option>
+<option value="1WP0451">1WP0451 - Blueberry Macaroon Dough</option>
+<option value="1CK0237">1CK0237 - Blueberry Macaroon pcs (SN)</option>
+<option value="1WPP035">1WPP035 - Blueberry Macaroon Stick (Primer)</option>
+<option value="1BC0001">1BC0001 - Brownie Cheese 20x10</option>
+<option value="1BC0002">1BC0002 - Brownie Cheese 20x20</option>
+<option value="1BC0003">1BC0003 - Brownie Cheese 20x30</option>
+<option value="1BC0004">1BC0004 - Brownie Cheese 30x30</option>
+<option value="1BC0005">1BC0005 - Brownie Cheese 30x40</option>
+<option value="1BC0006">1BC0006 - Brownie Cheese 40x40</option>
+<option value="1BC0007">1BC0007 - Brownie Cheese 40x60</option>
+<option value="1WPP275">1WPP275 - Brownie Cheese Cake 20x10 (Primer)</option>
+<option value="1WPP274">1WPP274 - Brownie Cheese Cake 20x20 (Primer)</option>
+<option value="1WPP273">1WPP273 - Brownie Cheese Cake 20x30 (Primer)</option>
+<option value="1WPP272">1WPP272 - Brownie Cheese Cake 30x30 (Primer)</option>
+<option value="1WPP271">1WPP271 - Brownie Cheese Cake 40x30 (Primer)</option>
+<option value="1WPP270">1WPP270 - Brownie Cheese Cake 40x40 (Primer)</option>
+<option value="1PRT239">1PRT239 - Brownie Cheese Cake 4x8</option>
+<option value="1WPP277">1WPP277 - Brownie Cheese Cake 4x8 (Primer)</option>
+<option value="1WPC559">1WPC559 - Brownie Cheese Cake 60x30 (B)</option>
+<option value="1WP1200">1WP1200 - Brownie Cheese Cake 60x30 Dough</option>
+<option value="1WPC558">1WPC558 - Brownie Cheese Cake 60x40 (B)</option>
+<option value="1WPP269">1WPP269 - Brownie Cheese Cake 60x40 (Primer)</option>
+<option value="1WP1199">1WP1199 - Brownie Cheese Cake 60x40 Dough</option>
+<option value="1BC0010">1BC0010 - Brownie Cheese Cake D20</option>
+<option value="1WPC560">1WPC560 - Brownie Cheese Cake D20 (B)</option>
+<option value="1WPP276">1WPP276 - Brownie Cheese Cake D20 (Primer)</option>
+<option value="1WP1201">1WP1201 - Brownie Cheese Cake D20 Dough</option>
+<option value="1WP0420">1WP0420 - Brownie Cheese Cake Dough</option>
+<option value="1PR0387">1PR0387 - Bunny Basket</option>
+<option value="1WP1160">1WP1160 - Bunny Basket</option>
+<option value="1WPP110">1WPP110 - Bunny Basket (Primer)</option>
+<option value="1PR0385">1PR0385 - Bunny Bike</option>
+<option value="1WP1180">1WP1180 - Bunny Bike</option>
+<option value="1WPP109">1WPP109 - Bunny Bike (Primer)</option>
+<option value="1PR0388">1PR0388 - Bunny Wheel</option>
+<option value="1WP1179">1WP1179 - Bunny Wheel</option>
+<option value="1WPP108">1WPP108 - Bunny Wheel (Primer)</option>
+<option value="1WP0489">1WP0489 - Butter Scotch Dough</option>
+<option value="1WP0694">1WP0694 - Butter Scotch Ganache Dough</option>
+<option value="1WPC234">1WPC234 - Butter Scotch Octagonal (B)</option>
+<option value="1CK0379">1CK0379 - Butter Scotch Octagonal Box</option>
+<option value="1WPP069">1WPP069 - Butter Scotch Octagonal Box (Plastik)</option>
+<option value="1WPP014">1WPP014 - Butter Sugar 121 (Plastik)</option>
+<option value="1WP0503">1WP0503 - Butter Sugar Dough</option>
+<option value="1CK0263">1CK0263 - Cappucino Macaroon</option>
+<option value="1WPC273">1WPC273 - Cappucino Macaroon (B)</option>
+<option value="1WP0444">1WP0444 - Cappucino Macaroon Dough</option>
+<option value="1PR0431">1PR0431 - Cappucino Truffle</option>
+<option value="1WPP121">1WPP121 - Capucino Macaroon Cookies (Primer)</option>
+<option value="1WPP091">1WPP091 - Capucino Truffle (Primer)</option>
+<option value="1WP1170">1WP1170 - Capucino Truffle Praline Dough</option>
+<option value="1PR0476">1PR0476 - Caramel</option>
+<option value="1WP0319">1WP0319 - Caramel B.Scotch Dough</option>
+<option value="1WP0330">1WP0330 - Caramel Cashew (Garnish) Dough</option>
+<option value="1WPP092">1WPP092 - Caramel Praline (Primer)</option>
+<option value="1WP0247">1WP0247 - Caramelize Almond</option>
+<option value="1PR0064">1PR0064 - Cherry Cordial</option>
+<option value="1WPP084">1WPP084 - Cherry Cordial (Primer)</option>
+<option value="1WP0595">1WP0595 - Cherry Cordial Praline Dough</option>
+<option value="1WP0482">1WP0482 - Cho Chip Cookies Bakel Dough</option>
+<option value="1WPC011">1WPC011 - Cho Chip Cookies Fancy (B)</option>
+<option value="1WPC386">1WPC386 - Cho Double Butter Sugar (B)</option>
+<option value="1WPP015">1WPP015 - Cho Double Butter Sugar 121 (Plastik)</option>
+<option value="1WP1005">1WP1005 - Cho Double Butter Sugar Dough</option>
+<option value="1WPP085">1WPP085 - Choco Brownie (Primer)</option>
+<option value="1PR0544">1PR0544 - Choco Brownie Praline</option>
+<option value="1WP1166">1WP1166 - Choco Brownie Praline Dough</option>
+<option value="1WPC233">1WPC233 - Choco Butter Sugar (B)</option>
+<option value="1PRT217">1PRT217 - Choco Cake 30x10</option>
+<option value="1WPP315">1WPP315 - Choco Cake 30X10 (Primer)</option>
+<option value="1PRT254">1PRT254 - Choco Cha Cha</option>
+<option value="1WPP366">1WPP366 - Choco Cha Cha (Primer)</option>
+<option value="1CS0005">1CS0005 - Choco Cheese</option>
+<option value="1WPC551">1WPC551 - Choco Cheese Loaf (B)</option>
+<option value="1WP1196">1WP1196 - Choco Cheese Loaf (WP)</option>
+<option value="1WP0426">1WP0426 - Choco Cheese Loaf Cake Dough</option>
+<option value="1CS0025">1CS0025 - Choco Cheese Slice</option>
+<option value="1WPP354">1WPP354 - Choco Cheese Slice (Primer)</option>
+<option value="1WPP112">1WPP112 - Choco Cheese Slice (WP)</option>
+<option value="1CS0001">1CS0001 - Choco Chip</option>
+<option value="1CK0363">1CK0363 - Choco Chip Fancy Box</option>
+<option value="1WPC343">1WPC343 - Choco Chip GPM & Gourmet (B)</option>
+<option value="1WPC550">1WPC550 - Choco Chip Loaf (B)</option>
+<option value="1WP1195">1WP1195 - Choco Chip Loaf (WP)</option>
+<option value="1WP0427">1WP0427 - Choco Chip Loaf Dough</option>
+<option value="1CS0024">1CS0024 - Choco Chip Slice</option>
+<option value="1WPP353">1WPP353 - Choco Chip Slice (Primer)</option>
+<option value="1WPP111">1WPP111 - Choco Chip Slice (WP)</option>
+<option value="1CK0268">1CK0268 - Choco Cream Cheese Macaroon</option>
+<option value="1WPP120">1WPP120 - Choco Cream Cheese Macaroon Cookies (Primer)</option>
+<option value="1WPP317">1WPP317 - Choco Crunchy Cup (Primer)</option>
+<option value="1PRT223">1PRT223 - Choco Crunchy Cup JKT</option>
+<option value="1WPC554">1WPC554 - Choco Cup Cake (B)</option>
+<option value="1WPP116">1WPP116 - Choco Cup Cake (WP)</option>
+<option value="1WP0237">1WP0237 - Choco Cup Cake Dough</option>
+<option value="1WP1191">1WP1191 - Choco Cup Cake Dough</option>
+<option value="1PR0350">1PR0350 - Choco I Love You Milk</option>
+<option value="1PR0353">1PR0353 - Choco I Miss U Milk</option>
+<option value="1WPC266">1WPC266 - Choco Macaroon (B)</option>
+<option value="1WP0437">1WP0437 - Choco Macaroon Dough</option>
+<option value="1PRT250">1PRT250 - Choco Mint</option>
+<option value="1WPP362">1WPP362 - Choco Mint (Primer)</option>
+<option value="1WP0563">1WP0563 - Choco Molten Dough</option>
+<option value="1WPP017">1WPP017 - Choco Peanut Butter 121 (Plastik)</option>
+<option value="1WPC434">1WPC434 - Choco Peanut Butter Bakel (B)</option>
+<option value="1CK0345">1CK0345 - Choco Peanut Cookies</option>
+<option value="1WP1012">1WP1012 - Choco Peanut Mouse Dough</option>
+<option value="1WPC529">1WPC529 - Choco Pineapple (B)</option>
+<option value="1WP1071">1WP1071 - Choco Pineapple Dough</option>
+<option value="1PRT252">1PRT252 - Choco Pistasio</option>
+<option value="1WPP364">1WPP364 - Choco Pistasio (Primer)</option>
+<option value="1PR0542">1PR0542 - Choco Snack Praline</option>
+<option value="1WPP086">1WPP086 - Choco Snack Praline (Primer)</option>
+<option value="1WP1167">1WP1167 - Choco Snack Praline Dough</option>
+<option value="1WP0390">1WP0390 - Choco Symple Syrup Dough</option>
+<option value="1CK0267">1CK0267 - Choco Vanilla Macaroon</option>
+<option value="1WPP119">1WPP119 - Choco Vanilla Macaroon Cookies (Primer)</option>
+<option value="1CK0382">1CK0382 - Chocolate Almond Cookie Fancy</option>
+<option value="1WPP072">1WPP072 - Chocolate Almond Cookie Fancy (Plastik)</option>
+<option value="1CK0371">1CK0371 - Chocolate Butter Cookies 901</option>
+<option value="1WPP076">1WPP076 - Chocolate Butter Cookies 901 (Plastik)</option>
+<option value="1CK0061">1CK0061 - Chocolate Butter Sugar 121</option>
+<option value="1WP0646">1WP0646 - Chocolate Cigaratte (Garnish) Dough</option>
+<option value="1CC0011">1CC0011 - chocolate curd D20</option>
+<option value="1WPP314">1WPP314 - Chocolate Curd D20 (Primer)</option>
+<option value="1WP0638">1WP0638 - Chocolate Dark Curl (Garnish) Dough</option>
+<option value="1WP1108">1WP1108 - Chocolate Dark Sheet Dough</option>
+<option value="1CD0028">1CD0028 - Chocolate Devil 20 x 20 w/ Cover & Ornament</option>
+<option value="1WPP289">1WPP289 - Chocolate Devil 20 X 20 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0035">1CD0035 - Chocolate Devil 20 x 20 w/ Ornament</option>
+<option value="1WPP296">1WPP296 - Chocolate Devil 20 X 20 w/ Ornament (Primer)</option>
+<option value="1CD0029">1CD0029 - Chocolate Devil 20 x 30 w/ Cover & Ornament</option>
+<option value="1WPP288">1WPP288 - Chocolate Devil 20 X 30 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0036">1CD0036 - Chocolate Devil 20 x 30 w/ Ornament</option>
+<option value="1WPP295">1WPP295 - Chocolate Devil 20 X 30 w/ Ornament (Primer)</option>
+<option value="1CD0002">1CD0002 - Chocolate Devil 20cm</option>
+<option value="1CD0001">1CD0001 - Chocolate Devil 20x10</option>
+<option value="1WPP168">1WPP168 - Chocolate Devil 20X10 (Primer)</option>
+<option value="1CD0003">1CD0003 - Chocolate Devil 20x20</option>
+<option value="1WPP167">1WPP167 - Chocolate Devil 20X20 (Primer)</option>
+<option value="1CD0004">1CD0004 - Chocolate Devil 20x30</option>
+<option value="1PRT055">1PRT055 - Chocolate Devil 3 x 10</option>
+<option value="1CD0030">1CD0030 - Chocolate Devil 30 x 30 w/ Cover & Ornament</option>
+<option value="1WPP287">1WPP287 - Chocolate Devil 30 X 30 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0037">1CD0037 - Chocolate Devil 30 x 30 w/ Ornament</option>
+<option value="1WPP294">1WPP294 - Chocolate Devil 30 X 30 w/ Ornament (Primer)</option>
+<option value="1CD0031">1CD0031 - Chocolate Devil 30 x 40 w/ Cover & Ornament</option>
+<option value="1CD0038">1CD0038 - Chocolate Devil 30 x 40 w/ Ornament</option>
+<option value="1WPP293">1WPP293 - Chocolate Devil 30 X 40 w/ Ornament (Primer)</option>
+<option value="1WPP166">1WPP166 - Chocolate Devil 30X20 (Primer)</option>
+<option value="1CD0005">1CD0005 - Chocolate Devil 30x30</option>
+<option value="1WPP165">1WPP165 - Chocolate Devil 30X30 (Primer)</option>
+<option value="1CD0006">1CD0006 - Chocolate Devil 30x40</option>
+<option value="1WPP170">1WPP170 - Chocolate Devil 3x10 (Primer)</option>
+<option value="1WPP286">1WPP286 - Chocolate Devil 40 X 30 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0032">1CD0032 - Chocolate Devil 40 x 40 w/ Cover & Ornament</option>
+<option value="1WPP285">1WPP285 - Chocolate Devil 40 X 40 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0039">1CD0039 - Chocolate Devil 40 x 40 w/ Ornament</option>
+<option value="1WPP292">1WPP292 - Chocolate Devil 40 X 40 w/ Ornament (Primer)</option>
+<option value="1CD0033">1CD0033 - Chocolate Devil 40 x 60 w/ Cover & Ornament</option>
+<option value="1WPP284">1WPP284 - Chocolate Devil 40 X 60 w/ Cover & Ornament (Primer)</option>
+<option value="1CD0040">1CD0040 - Chocolate Devil 40 x 60 w/ Ornament</option>
+<option value="1WPP291">1WPP291 - Chocolate Devil 40 X 60 w/ Ornament (Primer)</option>
+<option value="1WPP164">1WPP164 - Chocolate Devil 40X30 (Primer)</option>
+<option value="1CD0007">1CD0007 - Chocolate Devil 40x40</option>
+<option value="1WPP163">1WPP163 - Chocolate Devil 40X40 (Primer)</option>
+<option value="1CD0008">1CD0008 - Chocolate Devil 40x60</option>
+<option value="1WPP162">1WPP162 - Chocolate Devil 60X40 (Primer)</option>
+<option value="1CD0027">1CD0027 - Chocolate Devil D.20 w/ Cover & Ornament</option>
+<option value="1CD0034">1CD0034 - Chocolate Devil D.20 w/ Ornament</option>
+<option value="1WPP297">1WPP297 - Chocolate Devil D.20 w/ Ornament (Primer)</option>
+<option value="1WPP169">1WPP169 - Chocolate Devil D20 (Primer)</option>
+<option value="1WPP290">1WPP290 - Chocolate Devil D20 w/ Cover & Ornament (Primer)</option>
+<option value="1WPP250">1WPP250 - Chocolate Emotion D20 (Primer)</option>
+<option value="1WPP251">1WPP251 - Chocolate Emotion Triangle (Primer)</option>
+<option value="1WP0305">1WP0305 - Chocolate Flake Milk 2013 Without Pack Dough</option>
+<option value="1WP0006">1WP0006 - Chocolate Ganache Dough</option>
+<option value="1WP0270">1WP0270 - Chocolate Glacee Dark Dough</option>
+<option value="1WPP155">1WPP155 - Chocolate Glacee Dark Dough (Plastik)</option>
+<option value="1WPP048">1WPP048 - Chocolate Heart Milk (Primer)</option>
+<option value="1WP1101">1WP1101 - Chocolate Heart Milk Dough</option>
+<option value="1WPP047">1WPP047 - Chocolate Heart Pink (Primer)</option>
+<option value="1WP1099">1WP1099 - Chocolate Heart Pink Dough</option>
+<option value="1CK0287">1CK0287 - Chocolate Heart White</option>
+<option value="1WPP081">1WPP081 - Chocolate Heart White (Primer)</option>
+<option value="1WP1162">1WP1162 - Chocolate Heart White Dough</option>
+<option value="1WPP054">1WPP054 - Chocolate Love U Milk (Primer)</option>
+<option value="1WP1103">1WP1103 - Chocolate Love U Milk Dough</option>
+<option value="1WPP053">1WPP053 - Chocolate Love U Pink (Primer)</option>
+<option value="1WP1102">1WP1102 - Chocolate Love U Pink Dough</option>
+<option value="1WPP082">1WPP082 - Chocolate Love U White (Primer)</option>
+<option value="1WP1163">1WP1163 - Chocolate Love U White Dough</option>
+<option value="1PR0352">1PR0352 - Chocolate Love White</option>
+<option value="1WPP029">1WPP029 - Chocolate Macaroon Cookies (Primer)</option>
+<option value="1CK0239">1CK0239 - Chocolate Macaroon pcs (SN)</option>
+<option value="1WPP037">1WPP037 - Chocolate Macaroon Stick (Primer)</option>
+<option value="1WPC564">1WPC564 - Chocolate Melt (B)</option>
+<option value="1WP1210">1WP1210 - Chocolate Melt Dough</option>
+<option value="1WP0647">1WP0647 - Chocolate Milk Curl (Garnish) Dough</option>
+<option value="1WPP056">1WPP056 - Chocolate Miss You Milk (Primer)</option>
+<option value="1WP1105">1WP1105 - Chocolate Miss You Milk Dough</option>
+<option value="1WPP055">1WPP055 - Chocolate Miss You Pink (Primer)</option>
+<option value="1WP1104">1WP1104 - Chocolate Miss You Pink Dough</option>
+<option value="1PR0355">1PR0355 - Chocolate Miss You White</option>
+<option value="1WPP083">1WPP083 - Chocolate Miss You White (Primer)</option>
+<option value="1WP1164">1WP1164 - Chocolate Miss You White Dough</option>
+<option value="1WP0664">1WP0664 - Chocolate Mousse Emotion Dough</option>
+<option value="1WPP148">1WPP148 - Chocolate Mousse Emotion Dough (Plastik)</option>
+<option value="1PB0007">1PB0007 - Chocolate Peanut butter cake 20x10</option>
+<option value="1WPP325">1WPP325 - Chocolate Peanut Butter Cake 20X10 (Primer)</option>
+<option value="1PB0006">1PB0006 - Chocolate Peanut butter cake 20x20</option>
+<option value="1WPP324">1WPP324 - Chocolate Peanut Butter Cake 20X20 (Primer)</option>
+<option value="1PB0005">1PB0005 - Chocolate Peanut butter cake 30x20</option>
+<option value="1WPP323">1WPP323 - Chocolate Peanut Butter Cake 30X20 (Primer)</option>
+<option value="1PB0004">1PB0004 - Chocolate Peanut butter cake 30x30</option>
+<option value="1WPP322">1WPP322 - Chocolate Peanut Butter Cake 30X30 (Primer)</option>
+<option value="1PB0003">1PB0003 - Chocolate Peanut butter cake 40x30</option>
+<option value="1WPP321">1WPP321 - Chocolate Peanut Butter Cake 40X30 (Primer)</option>
+<option value="1PB0002">1PB0002 - Chocolate Peanut butter cake 40x40</option>
+<option value="1WPP320">1WPP320 - Chocolate Peanut Butter Cake 40X40 (Primer)</option>
+<option value="1PRT238">1PRT238 - Chocolate Peanut butter cake 4x8</option>
+<option value="1WPP326">1WPP326 - Chocolate Peanut Butter Cake 4X8 (Primer)</option>
+<option value="1PB0001">1PB0001 - Chocolate Peanut butter cake 60x40</option>
+<option value="1WPP319">1WPP319 - Chocolate Peanut Butter Cake 60X40 (Primer)</option>
+<option value="1MCC001">1MCC001 - chocolate Rich Cake (D20) / Emotion</option>
+<option value="1PRT061">1PRT061 - Chocolate Rich Cake Portion</option>
+<option value="1WPC534">1WPC534 - Chocolate Sponge 60X30 (B)</option>
+<option value="1WP1182">1WP1182 - Chocolate Sponge 60X30 Dough</option>
+<option value="1WPC533">1WPC533 - Chocolate Sponge 60X40 (B)</option>
+<option value="1WP0391">1WP0391 - Chocolate Sponge 60X40 Dough</option>
+<option value="1WPC561">1WPC561 - Chocolate Sponge D20 (B)</option>
+<option value="1WP0001">1WP0001 - Chocolate Sponge Dough</option>
+<option value="1WPP145">1WPP145 - Chocolate Sponge Dough (Plastik) (Plastik)</option>
+<option value="1WP1181">1WP1181 - Chocolate Sponge Moist 60X30 Dough</option>
+<option value="1WPC532">1WPC532 - Chocolate Sponge Moist D20 (B)</option>
+<option value="1WP0631">1WP0631 - Chocolate Sponge Moist D20 Dough</option>
+<option value="1WPC531">1WPC531 - Chocolate Sponge Moist Devil 60X30 (B)</option>
+<option value="1WPC530">1WPC530 - Chocolate Sponge Moist Devil 60X40 (B)</option>
+<option value="1WP0922">1WP0922 - Chocolate Sponge Moist Devil 60X40 Dough</option>
+<option value="1WP1204">1WP1204 - Chocolate Sponge Moist Devil D20 Dough</option>
+<option value="1WP0644">1WP0644 - Chocolate Teks (Garnish) Dough</option>
+<option value="1CT0002">1CT0002 - Chocolate Tiramisu 20 R</option>
+<option value="1CT0008">1CT0008 - Chocolate Tiramisu 20x10</option>
+<option value="1WPP194">1WPP194 - Chocolate Tiramisu 20x10 (Primer)</option>
+<option value="1CT0003">1CT0003 - Chocolate Tiramisu 20x20</option>
+<option value="1WPP193">1WPP193 - Chocolate Tiramisu 20x20 (Primer)</option>
+<option value="1CT0004">1CT0004 - Chocolate Tiramisu 20x30</option>
+<option value="1WPP192">1WPP192 - Chocolate Tiramisu 30x20 (Primer)</option>
+<option value="1CT0005">1CT0005 - Chocolate Tiramisu 30x30</option>
+<option value="1WPP191">1WPP191 - Chocolate Tiramisu 30x30 (Primer)</option>
+<option value="1CT0007">1CT0007 - Chocolate Tiramisu 30x40</option>
+<option value="1WPP190">1WPP190 - Chocolate Tiramisu 30x40 (Primer)</option>
+<option value="1CT0006">1CT0006 - Chocolate Tiramisu 40x40</option>
+<option value="1WPP189">1WPP189 - Chocolate Tiramisu 40x40 (Primer)</option>
+<option value="1CT0001">1CT0001 - Chocolate Tiramisu 40x60</option>
+<option value="1WPP196">1WPP196 - Chocolate Tiramisu 4x8 (Primer)</option>
+<option value="1WPP188">1WPP188 - Chocolate Tiramisu 60x40 (Primer)</option>
+<option value="1WPP195">1WPP195 - Chocolate Tiramisu D20 (Primer)</option>
+<option value="1WP0043">1WP0043 - Chocolate Tiramisu Dough</option>
+<option value="1WP0645">1WP0645 - Chocolate White Curl (Garnish) Dough</option>
+<option value="1CM0001">1CM0001 - Chocomaltine Cheese Cake 20x10</option>
+<option value="1WPP333">1WPP333 - Chocomaltine Cheese Cake 20X10 (Primer)</option>
+<option value="1CM0003">1CM0003 - Chocomaltine Cheese Cake 20x20</option>
+<option value="1WPP332">1WPP332 - Chocomaltine Cheese Cake 20X20 (Primer)</option>
+<option value="1CM0004">1CM0004 - Chocomaltine Cheese Cake 30x20</option>
+<option value="1WPP331">1WPP331 - Chocomaltine Cheese Cake 30X20 (Primer)</option>
+<option value="1CM0005">1CM0005 - Chocomaltine Cheese Cake 30x30</option>
+<option value="1WPP330">1WPP330 - Chocomaltine Cheese Cake 30X30 (Primer)</option>
+<option value="1CM0006">1CM0006 - Chocomaltine Cheese Cake 40x30</option>
+<option value="1WPP329">1WPP329 - Chocomaltine Cheese Cake 40X30 (Primer)</option>
+<option value="1CM0007">1CM0007 - Chocomaltine Cheese Cake 40x40</option>
+<option value="1WPP328">1WPP328 - Chocomaltine Cheese Cake 40X40 (Primer)</option>
+<option value="1CM0008">1CM0008 - Chocomaltine Cheese Cake 60x40</option>
+<option value="1WPP327">1WPP327 - Chocomaltine Cheese Cake 60X40 (Primer)</option>
+<option value="1CM0002">1CM0002 - Chocomaltine Cheese Cake D20</option>
+<option value="1WPP334">1WPP334 - Chocomaltine Cheese Cake D20 (Primer)</option>
+<option value="1PRT242">1PRT242 - Chocomaltine Cheese Cake Triangle</option>
+<option value="1WPP335">1WPP335 - Chocomaltine Cheese Cake Triangle (Primer)</option>
+<option value="1WPP023">1WPP023 - Classic Peanut Butter Fancy (Plastik)</option>
+<option value="1WP0005">1WP0005 - Coffee Butter Cream Dough</option>
+<option value="1WP0004">1WP0004 - Coffee Syrup Dough</option>
+<option value="1PR0101">1PR0101 - Coffee Truffle</option>
+<option value="1WPP088">1WPP088 - Coffee Truffle (Primer)</option>
+<option value="1WP1165">1WP1165 - Coffee Truffle Praline Dough</option>
+<option value="1WP0483">1WP0483 - Coklat Almond Bakel Dough</option>
+<option value="1WPC013">1WPC013 - Coklat Almond Fancy (B)</option>
+<option value="1CK0303">1CK0303 - Corn Flake</option>
+<option value="1WPP052">1WPP052 - Corn Flake (Primer)</option>
+<option value="1WP0472">1WP0472 - Corn Flake Dough</option>
+<option value="1WP0924">1WP0924 - Cream Cheese Frosting Dough</option>
+<option value="1WPP158">1WPP158 - Cream Cheese Frosting Dough (Plastik)</option>
+<option value="1CK0260">1CK0260 - Cream cheese Macaroon</option>
+<option value="1WPP122">1WPP122 - Cream Cheese Macaroon Cookies (Primer)</option>
+<option value="1WP0411">1WP0411 - Cream Cheesse Mousse Dough</option>
+<option value="1PRT258">1PRT258 - Cup Cake Milk Nutella</option>
+<option value="1WPP370">1WPP370 - Cup Cake Milk Nutella (Primer)</option>
+<option value="1PRT259">1PRT259 - Cup Cake Oreo</option>
+<option value="1WPP371">1WPP371 - Cup Cake Oreo (Primer)</option>
+<option value="1PRT256">1PRT256 - Cup Cake Red Velvet w/cheery</option>
+<option value="1WPP368">1WPP368 - Cup Cake Red Velvet w/cheery (Primer)</option>
+<option value="1PRT257">1PRT257 - Cup Cake Red Velvet w/Strawberry</option>
+<option value="1WPP369">1WPP369 - Cup Cake Red Velvet w/Strawberry (Primer)</option>
+<option value="1PRT260">1PRT260 - Cup Cake Roacher Cashew Dark</option>
+<option value="1WPP372">1WPP372 - Cup Cake Roacher Cashew Dark (Primer)</option>
+<option value="1PRT261">1PRT261 - Cup Cake Roacher Cashew White</option>
+<option value="1WPP373">1WPP373 - Cup Cake Roacher Cashew White (Primer)</option>
+<option value="1PRT255">1PRT255 - Cup Cake Strawberry</option>
+<option value="1WPP367">1WPP367 - Cup Cake Strawberry (Primer)</option>
+<option value="1PRT251">1PRT251 - Cutie Berry</option>
+<option value="1WPP363">1WPP363 - Cutie Berry (Primer)</option>
+<option value="1WP0686">1WP0686 - Dark Choco Crunchy Dough</option>
+<option value="1WPP152">1WPP152 - Dark Choco Crunchy Dough (Plastik)</option>
+<option value="1WP0008">1WP0008 - Dark Choco Mousse Black Forest Dough</option>
+<option value="1WP0406">1WP0406 - Dark Chocolate Mousse Dough</option>
+<option value="1WP0315">1WP0315 - Dark Ganache Dough</option>
+<option value="1WP1122">1WP1122 - Dark Ganache Praline Dough</option>
+<option value="1WPP049">1WPP049 - Dark Urchin (Primer)</option>
+<option value="1WP0249">1WP0249 - Dark Urchin Dough</option>
+<option value="1WP0487">1WP0487 - Double Chochip Bakel Dough</option>
+<option value="1WPC199">1WPC199 - Double Chochip Fancy (B)</option>
+<option value="1CK0347">1CK0347 - Double Decker Cookies</option>
+<option value="1WPC539">1WPC539 - Double Fudge Sponge D20 (B)</option>
+<option value="1WP0409">1WP0409 - Double Fudge Sponge Dough</option>
+<option value="1WP0665">1WP0665 - Double Fudge Sponge Dough</option>
+<option value="1WP1081">1WP1081 - Dust Blanchia Strawberry Dough</option>
+<option value="1WPC552">1WPC552 - Efc Cake Loaf (B)</option>
+<option value="1WP1197">1WP1197 - Efc Cake Loaf (WP)</option>
+<option value="1CS0027">1CS0027 - EFC Cake Slice</option>
+<option value="1WP0424">1WP0424 - Efc Dough</option>
+<option value="1WPP356">1WPP356 - English Fruit Cake Slice (Primer)</option>
+<option value="1WPP114">1WPP114 - English Fruit Cake Slice (WP)</option>
+<option value="1CS0010">1CS0010 - Englsh Fruit Cake Slice</option>
+<option value="1WP0590">1WP0590 - Filling Caramel Praline Dough</option>
+<option value="1WP0031">1WP0031 - Filling Choco Modeling Praline Dough</option>
+<option value="1WP0466">1WP0466 - Filling Coffee Truffle Praline Dough</option>
+<option value="1WP0592">1WP0592 - Filling Florentine Praline Dough</option>
+<option value="1WP1087">1WP1087 - Filling Ganache Straw Dough</option>
+<option value="1WP0580">1WP0580 - Filling Hazelnut Praline Dough</option>
+<option value="1WP0461">1WP0461 - Filling Macaroon Mint</option>
+<option value="1WP0583">1WP0583 - Filling Milk Chocolate Praline Dough</option>
+<option value="1WP0393">1WP0393 - Filling Nougatin Praline Dough</option>
+<option value="1WP0593">1WP0593 - Filling Raspberry Praline Dough</option>
+<option value="1WP0476">1WP0476 - Filling Roacher Praline Dough</option>
+<option value="1WP0596">1WP0596 - Filling Soft Nougat Praline Dough</option>
+<option value="1WP0465">1WP0465 - Filling Strawberry Truffle Praline Dough</option>
+<option value="1PR0050">1PR0050 - Florentine</option>
+<option value="1WPP090">1WPP090 - Florentine Praline (Primer)</option>
+<option value="1WP0724">1WP0724 - Ganache Banana</option>
+<option value="1WP0458">1WP0458 - Ganache Green Tea Dough</option>
+<option value="1WP0462">1WP0462 - Ganache Lemon</option>
+<option value="1WP0460">1WP0460 - Ganache Milk</option>
+<option value="1WP0730">1WP0730 - Ganache Milk Choco</option>
+<option value="1WP0265">1WP0265 - Ganache Milk Dough</option>
+<option value="1WP1205">1WP1205 - Ganache Mint Dough</option>
+<option value="1WP0456">1WP0456 - Ganache Orange</option>
+<option value="1WP1209">1WP1209 - Ganache Oreo Crumb Dough</option>
+<option value="1WP0725">1WP0725 - Ganache Pistachio</option>
+<option value="1WP1207">1WP1207 - Ganache Pistachio Dough</option>
+<option value="1WP0728">1WP0728 - Ganache Strawberry</option>
+<option value="1WP0408">1WP0408 - Ganache Tripple Dough</option>
+<option value="1WP0383">1WP0383 - Ganache White</option>
+<option value="1WP1203">1WP1203 - Gelatin Mashed</option>
+<option value="1WPP020">1WPP020 - Ginger Butter Fancy (Plastik)</option>
+<option value="1WP0492">1WP0492 - Ginger Cookies Bakel Dough</option>
+<option value="1WPC002">1WPC002 - Ginger Cookies Fancy (B)</option>
+<option value="1CK0364">1CK0364 - Ginger Fancy Box</option>
+<option value="1WPC345">1WPC345 - Ginger GPM & Gourmet (B)</option>
+<option value="1WP0682">1WP0682 - Glaze Caramel Dark (Garnish) Dough</option>
+<option value="1CK0298">1CK0298 - Gourmet Cookies</option>
+<option value="1WPP068">1WPP068 - Gourmet Cookies (Plastik)</option>
+<option value="1CK0361">1CK0361 - Gourmet Large Box</option>
+<option value="1WPP067">1WPP067 - Gourmet Large Box (Plastik)</option>
+<option value="1CK0344">1CK0344 - GPM New Box</option>
+<option value="1WPP066">1WPP066 - GPM New Box (Plastik)</option>
+<option value="1WP1033">1WP1033 - Green Blanchia Dough</option>
+<option value="1WPC276">1WPC276 - Green Macaroon (B)</option>
+<option value="1WP0447">1WP0447 - Green Macaroon Dough</option>
+<option value="1CK0236">1CK0236 - Green Tea  Macaroon pcs (SN)</option>
+<option value="1GT0001">1GT0001 - Green tea cold cheese 20x10</option>
+<option value="1WPP351">1WPP351 - Green Tea Cold Cheese 20X10 (Primer)</option>
+<option value="1GT0002">1GT0002 - Green tea cold cheese 20x20</option>
+<option value="1WPP350">1WPP350 - Green Tea Cold Cheese 20X20 (Primer)</option>
+<option value="1GT0003">1GT0003 - Green tea cold cheese 30x20</option>
+<option value="1WPP349">1WPP349 - Green Tea Cold Cheese 30X20 (Primer)</option>
+<option value="1GT0004">1GT0004 - Green tea cold cheese 30x30</option>
+</select>       
+        </td>
+	</tr>
+    <tr>
+		<td class="table_field_1"><strong>BOM Quantity</strong></td>
+        <td class = "column_input" >
+        120.0000        </td>
+     </tr>
+     <tr>
+		<td class="table_field_1"><strong>Quantity</strong></td>
+        <td class = "column_input" >
+		<input type="text" name="tpaket_detail[qty][1]" id="tpaket_detail[qty][1]" value="240.0000" 240 />        
+        </td>
+	</tr>
+    <tr>
+   <td class="table_field_1"><strong>UOM</strong></td>
+        <td class = "column_input" >
+    	  KG		<input type="hidden" name="tpaket_detail[uom][1]" id="tpaket_detail[uom][1]" value="KG" />	 
+       
+    </td>
+    </tr>
+</table>
+<table width="1038" border="0" align="center" id="table2">
+	<tr bgcolor="#999999">
+		<td class="table_header_1"><div align="center">&nbsp;</div></td>
+		<td class="table_header_1"><div align="center"><strong>No.</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Material No</strong></div></td>
+		  <td class="table_header_1"><div align="center"><strong>Batch Number</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Quantity</strong></div></td>
+        <td class="table_header_1"><div align="center"><strong>Total Quantity</strong></div></td>
+		<td class="table_header_1"><div align="center"><strong>Uom</strong></div></td>
+			</tr>
+    <tr class="table_row_2">
+    		<td align="center"><label for="delete[1]"><input type="checkbox" name="delete[1]" id="delete[1]" value="1" /></label>
+</td>
+		<td align="center">        <input type="hidden" name="tpaket_detail[id_tpaket_h_detail][1]" id="tpaket_detail[id_tpaket_h_detail][1]" value="1" />        <input type="hidden" name="tpaket_detail[id_tpaket_detail][1]" id="tpaket_detail[id_tpaket_detail][1]" value="117" />        1</td>
+                 <td align="left"><input type="hidden" name="tpaket_detail[material_detail][1]" id="tpaket_detail[material_detail][1]" value="FDG0020" />FDG0020</td>
+         <td align="left"><input type="hidden" name="tpaket_detail[num][1]" id="tpaket_detail[num][1]" value="" /></td>
+         		<td align="center">
+<input type="text" name="tpaket_detail[quantity][1]" id="tpaket_detail[quantity][1]" value="50.0000" class="input_number" size="8" /></td>
+<td align="center">
+<input type="text" name="tpaket_detail[quantity_total][1]" id="tpaket_detail[quantity_total][1]" value="12000.0000" class="input_number" size="8" /></td>
+		<td>
+        KG         <input type="hidden" name="tpaket_detail[detail_uom][1]" id="tpaket_detail[detail_uom][1]" value="KG" />        </td>
+		    </tr>
+  <tr class="table_row_1">
+    		<td align="center"><label for="delete[2]"><input type="checkbox" name="delete[2]" id="delete[2]" value="2" /></label>
+</td>
+		<td align="center">        <input type="hidden" name="tpaket_detail[id_tpaket_h_detail][2]" id="tpaket_detail[id_tpaket_h_detail][2]" value="" />        <input type="hidden" name="tpaket_detail[id_tpaket_detail][2]" id="tpaket_detail[id_tpaket_detail][2]" value="" />        2</td>
+                 <td align="left"><input type="hidden" name="tpaket_detail[material_detail][2]" id="tpaket_detail[material_detail][2]" value="FDG0206" />FDG0206</td>
+         <td align="left"><input type="hidden" name="tpaket_detail[num][2]" id="tpaket_detail[num][2]" value="" /></td>
+         		<td align="center">
+<input type="text" name="tpaket_detail[quantity][2]" id="tpaket_detail[quantity][2]" value="70.0000" class="input_number" size="8" /></td>
+<td align="center">
+<input type="text" name="tpaket_detail[quantity_total][2]" id="tpaket_detail[quantity_total][2]" value="16800.0000" class="input_number" size="8" /></td>
+		<td>
+        KG         <input type="hidden" name="tpaket_detail[detail_uom][2]" id="tpaket_detail[detail_uom][2]" value="KG" />        </td>
+			<tr>
+		<td>&nbsp;</td>
+		<td align="center"><input type="hidden" name="tpaket_detail[id_tpaket_h_detail][3]" id="tpaket_detail[id_tpaket_h_detail][3]" value="3" />3</td>
+		
+        <td align="center">
+                 
+        </td>
+         <td align="center">
+         <center>--------</center>        
+        </td>
+		<td align="center">
+		<input type="text" name="tpaket_detail[quantity][3]" id="tpaket_detail[quantity][3]" value=""  />		</td>
+        <td align="center">
+        <input type="text" name="tpaket_detail[quantity_total][3]" id="tpaket_detail[quantity_total][3]" value="0"  />		</td>
+		<td>
+                </td>
+	</tr>
+
+</table>
+<table width="430" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" align="center">
+        <input type="image" name="button[add]" id="" value="Tambah" src="http://localhost:8001/ybc/images/jadditem.png"  />        <input name="button[delete]" id="" type="image" src="http://localhost:8001/ybc/images/jdeleteitem.png" onClick="document.form1.submit();"> </td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+<table width="300" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center"> <input type="image" name="button[save]" id="" value="Save" src="http://localhost:8001/ybc/images/jbtnsave.png"  />                <input type="image" name="button[approve]" id="" value="Approve" src="http://localhost:8001/ybc/images/jbtnapprove.png"  />                        <a href="#" onclick="window.open('http://localhost:8001/ybc/help/Transaksi Paket.htm','popup','left=900 height=600,width=800,scrollbars=yes'); return(false);">
+        <img src="http://localhost:8001/ybc/images/help.png"></a>
+         </td>
+	</tr>
+	<tr>
+    <td align="center">&nbsp;</td>
+	</tr>
+	<tr>
+    <td align="center"><a href="http://localhost:8001/ybc/tpaket/browse">Back</a></td>
+	</tr>
+</table>
+
+</form></div>
+<div id="jagfoot">
+&copy;2017 YBC Software &mdash; Indonesia. All rights reserved.
+</div>
+</body>
+</html>

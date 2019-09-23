@@ -1,0 +1,215 @@
+<?php
+$jagsup_plant=trim($this->session->userdata['ADMIN']['plant']);
+$jagsup_company=trim($this->session->userdata['ADMIN']['plant_type_id']);
+
+$diredo = ROOTPATH."monitor/";
+include_once($diredo."swbsql.php");
+
+$aSQLRefSupport = new MySQLConnector();
+$aSQLRefSupport->connect();
+
+	$query1 = "SELECT `admin_realname`,`admin_phone`,`admin_email` FROM `d_admin` WHERE `admin_level`=23 AND `plant_type_id` = '".$jagsup_company."' LIMIT 0,1;";
+	
+	$aSQLRefSupport->query($query1);
+	$aSQLRefSupport->rowcount();
+	
+	if ($aSQLRefSupport->dbrowcount>0) {
+			$count = 0;
+			while ($count<$aSQLRefSupport->dbrowcount){
+				$jaglead_pic=mysql_result($aSQLRefSupport->dbresult,$count,'admin_realname');
+				if (strpos($jaglead_pic,' ')>0) {
+					$jaglead_pic = explode(' ',$jaglead_pic);
+					$jaglead_pic = trim($jaglead_pic[0]);
+				}
+				$jaglead_tel=mysql_result($aSQLRefSupport->dbresult,$count,'admin_phone');
+				$jaglead_mail=mysql_result($aSQLRefSupport->dbresult,$count,'admin_email');
+				$count++;
+			}
+	} else {
+		$jaglead_pic="";
+		$jaglead_tel="";
+		$jaglead_mail="";
+	}
+
+
+	$query1 = "SELECT `admin_realname`,`admin_phone`,`admin_email` FROM `d_admin` WHERE `admin_level`=21 AND `plants` LIKE '%".$jagsup_plant."%';";
+	
+	$aSQLRefSupport->query($query1);
+	$aSQLRefSupport->rowcount();
+	
+	if ($aSQLRefSupport->dbrowcount>0) {
+			$count = 0;
+			while ($count<$aSQLRefSupport->dbrowcount){
+				$jagonduty_pic=mysql_result($aSQLRefSupport->dbresult,$count,'admin_realname');
+				$jagonduty_tel=mysql_result($aSQLRefSupport->dbresult,$count,'admin_phone');
+				$jagonduty_mail=mysql_result($aSQLRefSupport->dbresult,$count,'admin_email');
+				$jagonduty_ext = '';
+				$count++;
+			}
+	} else {
+		$jagonduty_pic=$jaglead_pic;
+		$jagonduty_tel=$jaglead_tel;
+		$jagonduty_mail=$jaglead_mail;
+		$jagonduty_ext = "";
+	}
+
+// ============IT SUPPORT
+	if ($jagsup_company=="BID") {
+			$jagitlead_pic="Endang Supriatna";
+			$jagitlead_tel="081296664576";
+			$jagitlead_mail="endang@johnnyandrean.com";
+	} elseif ($jagsup_company=="JID") {
+			$jagitlead_pic="Singgih Jati";
+			$jagitlead_tel="081296664324";
+			$jagitlead_mail="singgih@johnnyandrean.com";
+	} elseif ($jagsup_company=="RID") {
+			$jagitlead_pic="Haryono Dwi Rahmanto";
+			$jagitlead_tel="081310900591";
+			$jagitlead_mail="haryono.rahmanto@johnnyandrean.com";
+	} else {
+			$jagitlead_pic="Joni";
+			$jagitlead_tel="081296664320";
+			$jagitlead_mail="joni@johnnyandrean.com";
+	}
+
+	
+	$query1 = "SELECT `support_name`,`support_tel`,`support_mail`,`support_job` FROM `d_support` WHERE (`support_job`=7 OR `support_job`=8) AND `plants` LIKE '%".$jagsup_plant."%';";
+//	echo $query1.'<hr />';
+	$aSQLRefSupport->query($query1);
+	$aSQLRefSupport->rowcount();
+	
+	if ($aSQLRefSupport->dbrowcount>0) {
+			$count = 0;
+			while ($count<$aSQLRefSupport->dbrowcount){
+				$jagitts_pic=mysql_result($aSQLRefSupport->dbresult,$count,'support_name');
+				$jagitts_tel=mysql_result($aSQLRefSupport->dbresult,$count,'support_tel');
+				$jagitts_mail=mysql_result($aSQLRefSupport->dbresult,$count,'support_mail');
+				$jagitts_job=mysql_result($aSQLRefSupport->dbresult,$count,'support_job');
+				$count++;
+			}
+			
+			if ($jagitts_job==8) {
+				$jagitlead_pic="Habib";
+				$jagitlead_tel="031 70936308 / 085230018946";
+				$jagitlead_mail="habib@johnnyandrean.com";
+			}
+	} else {
+		$jagitts_pic=$jagitlead_pic;
+		$jagitts_tel=$jagitlead_tel;
+		$jagitts_mail=$jagitlead_mail;
+	}	
+
+	if ($jagitlead_pic==$jagitts_pic){
+		$jagitlead_pic="";
+		$jagitlead_tel="";
+		$jagitlead_mail="";
+	}
+	
+
+$aSQLRefSupport->disconnect();
+unset($aSQLRefSupport);
+
+
+?>
+
+<div class="swbbodyb" style="color:#353535;background-color:#121212;border-right:#AAA690 7px solid;">
+		<div class="swcoltit"><div style="float:left;margin:2px 5px 0px 0px;"><img src="http://portal.johnnyandrean.com/images/phone.png" border="0" alt="Call Center" /></div>
+		<h2 style="color:#fdd250;"><span style="font-weight:normal;">WEB</span> CALL CENTER</h2>
+		</div>
+		<div class="swcol2">
+		<h4 style="color:#8f7ca7;">Web Support <b>On Duty</b></h4>
+			<div style="float:left;margin:2px 5px 0px 0px;"><img src="http://portal.johnnyandrean.com/images/callcenter.png" border="0" alt="Hubungi Kami" /></div>
+			<div style="float:left;width:77%;">
+				<b style="font-size:21px;"><?php echo strtoupper($jagonduty_pic); ?></b><br />
+				<div style="text-decoration:blink;color:#aa1122;font-size:14px;">
+				<?php 	if ($jagsup_company=="JID") { ?>
+				<b><blink>Direct Line: 021 40002213</blink></b><br />
+				<?php 	} elseif ($jagsup_company=="BID") { ?>
+				<b>Direct Line: 021 71693750</b><br />
+				<?php } ?>
+				</div>
+				Telp: 021 58902147 <?php if ($jagonduty_ext!="") echo "Ext: ".$jagonduty_ext; ?><br />
+				HP/SMS: <?php echo $jagonduty_tel; ?><br />
+				Email: <?php echo $jagonduty_mail; ?>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+<?php 
+$jaglead_pic = ''; //disabled 20141006
+if ($jaglead_pic!='') { ?>
+		<div class="swcol3">
+		<h4 style="color:#E46D0A;">Web Support <b>Leader</b></h4>
+			<i>(Hubungi kontak ini, jika nomor di atas tidak merespon)</i><br />&nbsp;
+			<div style="padding-left:17px;">
+				<b style="font-size:14px;"><?php echo strtoupper($jaglead_pic); ?></b><br /> 
+				<?php echo $jaglead_tel; ?> / <?php echo $jaglead_mail; ?>
+			</div>
+		</div>
+<?php } ?>
+		<div style="padding:5px 5px 5px 5px;background-color:#504f47;color:#ffffff;">
+		<div style="float:left;margin:-2px 5px 0px 0px;"><img src="http://portal.johnnyandrean.com/images/email.png" border="0" alt="Call Center" /></div>
+		
+		<div style="color:#bcbcbc;font-style:italic;">E-mail:</div><b style="font-size:16px;">
+<?php 	if ($jagsup_company=="JID") { ?>
+		sap.helpdesk@<span style="color:#fdd250;">jcodonuts.com</span>
+<?php 	} elseif ($jagsup_company=="BID") { ?>
+		sap.helpdesk@<span style="color:#fdd250;">johnnyandrean.com</span>
+<?php 	} elseif ($jagsup_company=="RID") { ?>
+		hr.helpdesk@<span style="color:#fdd250;">roppan.com</span>
+<?php 	} else { ?>
+		sap.helpdesk@<span style="color:#fdd250;">johnnyandrean.com</span>
+<?php 	}  ?>
+
+		</b>
+		</div>
+</div>
+<br />
+<div class="swbbodyb" style="color:#353535;background-color:#121212;border-right:#AAA690 7px solid;">
+		<div class="swcol1" style="border-bottom:#AAA690 2px solid;">
+		<h4 style="color:#75923C;">IT Support <b>On Duty</b></h4>
+			<i>(<b style="color:#aa1122;">PERHATIAN:</b> Khusus problem IT selain Web SAP)</i>
+			<div style="float:left;margin:2px 5px 0px 0px;height:135px;"><img src="http://portal.johnnyandrean.com/images/it.png" border="0" alt="Divisi IT" /></div>
+			<div style="display:block;padding-left:17px;">
+				<b style="font-size:19px;"><?php echo strtoupper($jagitts_pic); ?></b><br />
+				Telp/SMS: <b style="font-size:12px;"><?php echo $jagitts_tel; ?></b><br />
+				
+				<?php if ($jagitlead_pic!=""){ ?>
+				<br />
+				Silahkan SMS/Email Supervisor IT berikut jika nama di atas tidak merespon:<br /><br />
+				<b style="font-size:12px;"><?php echo strtoupper($jagitlead_pic); ?></b><br /> 
+				SMS: <?php echo $jagitlead_tel; ?><br />Email: <?php echo $jagitlead_mail; ?>
+				<?php } ?>
+			</div>
+			<div style="clear:left;"></div>
+		</div>
+</div>
+
+
+
+<?php 
+
+
+
+
+
+/*
+
+<br />
+<div style="padding:10px;border:#778899 2px solid;background-color:#ddeeff;font-size:10px;">
+<b style="color:#223344;font-size:120%;">IT TECHNICAL SUPPORT ON DUTY:</b>
+<br /><i style="color:#aa1122;"><b>IT hanya menangani masalah teknis di luar problem Web/SAP.</b></i>
+<ul>
+<li><b>Endang</b><br />Telp/SMS: (021) 71693766</li>
+<li><b>Singgih</b><br />Telp/SMS: (021) 71693768</li>
+<li><b>Joni</b><br />Telp/SMS: (021) 71693767<br />&nbsp;</li>
+<li><div style="color:#aa1122;">Area Surabaya &amp; Bali:</div><b>Habib</b><br />Telp/SMS: (031) 70936308</li>
+</ul>
+<br />
+<b style="color:#223344;font-size:120%;">E-MAIL:</b>
+<ul>
+<li>Email khusus Web SAP:<br /><b>sap.helpdesk@johnnyandrean.com</b><br />&nbsp;</li>
+<li>Email khusus IT <i style="color:#aa1122;">(di luar problem SAP/Web)</i>:<br /><b>helpdesk@johnnyandrean.com</b></li>
+</ul>
+</div>
+
+*/ ?>

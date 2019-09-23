@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sap_phpDataSet" targetNamespace="http://tempuri.org/sap_phpDataSet.xsd" xmlns:mstns="http://tempuri.org/sap_phpDataSet.xsd" xmlns="http://tempuri.org/sap_phpDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sap_phpConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sap_phpConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.InvStc.Properties.Settings.GlobalReference.Default.sap_phpConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="error_logTableAdapter" GeneratorDataComponentClassName="error_logTableAdapter" Name="error_log" UserDataComponentName="error_logTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sap_phpConnectionString (Settings)" DbObjectName="sap_php.error_log" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_trans`, `modul`, `message`, `time_error` FROM `error_log`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_trans" DataSetColumn="id_trans" />
+              <Mapping SourceColumn="modul" DataSetColumn="modul" />
+              <Mapping SourceColumn="message" DataSetColumn="message" />
+              <Mapping SourceColumn="time_error" DataSetColumn="time_error" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sap_phpDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sap_phpDataSet" msprop:Generator_UserDSName="sap_phpDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="error_log" msprop:Generator_TableClassName="error_logDataTable" msprop:Generator_TableVarName="tableerror_log" msprop:Generator_TablePropName="error_log" msprop:Generator_RowDeletingName="error_logRowDeleting" msprop:Generator_RowChangingName="error_logRowChanging" msprop:Generator_RowEvHandlerName="error_logRowChangeEventHandler" msprop:Generator_RowDeletedName="error_logRowDeleted" msprop:Generator_UserTableName="error_log" msprop:Generator_RowChangedName="error_logRowChanged" msprop:Generator_RowEvArgName="error_logRowChangeEvent" msprop:Generator_RowClassName="error_logRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_trans" msprop:Generator_ColumnVarNameInTable="columnid_trans" msprop:Generator_ColumnPropNameInRow="id_trans" msprop:Generator_ColumnPropNameInTable="id_transColumn" msprop:Generator_UserColumnName="id_trans" type="xs:int" />
+              <xs:element name="modul" msprop:Generator_ColumnVarNameInTable="columnmodul" msprop:Generator_ColumnPropNameInRow="modul" msprop:Generator_ColumnPropNameInTable="modulColumn" msprop:Generator_UserColumnName="modul">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="message" msprop:Generator_ColumnVarNameInTable="columnmessage" msprop:Generator_ColumnPropNameInRow="message" msprop:Generator_ColumnPropNameInTable="messageColumn" msprop:Generator_UserColumnName="message">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="time_error" msprop:Generator_ColumnVarNameInTable="columntime_error" msprop:Generator_ColumnPropNameInRow="time_error" msprop:Generator_ColumnPropNameInTable="time_errorColumn" msprop:Generator_UserColumnName="time_error" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

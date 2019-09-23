@@ -1,0 +1,17 @@
+<?php
+$dailymsg_status = 3; //1: ok, 2: warning, 3:error
+if ($dailymsg_status==1) $dailymsg_hcolor = "#7ae35e";
+elseif ($dailymsg_status==1) $dailymsg_hcolor = "#fdd250";
+	$dailymsg_hcolor = "#ff3355";
+
+
+$dailymsg_datetime = date('j M y - H:i')." WIB";
+$dailymsg_content = 'Saat ini sedang proses sinkronisasi item dari server. Kemungkinan akan ada item tidak ada selama proses ini. Proses ini akan berlangsung sekitar <b>15 menit</b> sejak jam pengumuman. Harap tunda sebentar pekerjaan Anda yang berhubungan input stock.';
+
+?>
+
+<div style="background-color:#353537;color:#ffffff;padding:10px;border-right:#aa1122 75px solid;"><div style="float:left;margin:0px 5px 5px 0px;"><img src="http://portal.johnnyandrean.com/images/pengumuman.jpg" alt="SINKRONISASI" /></div>
+<div style="margin-left:50px;background-color:#353537;color:#ffffff;">
+<b style="color:<?php echo $dailymsg_hcolor; ?>;font-size:210%;">SINKRONISASI ITEM (<?php echo $dailymsg_datetime; ?>): </b><div style="color:#fdd250;font-size:125%;"><?php echo $dailymsg_content; ?></div>
+</div>
+</div>

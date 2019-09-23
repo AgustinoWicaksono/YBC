@@ -1,0 +1,103 @@
+/* ================================================================
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/drop_examples.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/* commom style for all browsers */
+.container4 {
+text-align:center; background:#eee url(menu4.gif); border:1px solid #909; border-width:5px 1px 1px 1px; height:0px;
+margin:0 0 20px 0; /* for this demo only */
+}
+.menu2 {
+text-align:left; font-family: verdana, sans-serif; position:relative; font-size:0.90em; background-image: url(../../images/bgmenu.png); width:100px; height:30px; margin:1px ;border:1px solid #003399; border-bottom-style: solid; overflow: visible;
+}
+.menu2 ul {
+padding:0; margin:0; list-style-type: none;
+}
+.menu2 ul li {
+float: left; position: relative ;
+
+}
+.menu2 ul li.home {background:transparent url(menu4home.gif);}
+.menu2 ul li.products {background:transparent url(menu4products.gif);}
+.menu2 ul li.services {background:transparent url(menu4services.gif);}
+.menu2 ul li.contact {background:transparent url(menu4contact.gif);}
+.menu2 ul li.site {background:transparent url(menu4site.gif);}
+.menu2 ul li.news {background:transparent url(menu4news.gif);}
+.menu2 ul li.subprod {background:transparent url(menu4subprod.gif) no-repeat;}
+.menu2 ul li.subprod2 {background:transparent url(menu4subprod2.gif) no-repeat;}
+.menu2 ul li.subprod3 {background:transparent url(menu4subprod3.gif) no-repeat;}
+.menu2 ul li.subnews {background:transparent url(menu4subnews.gif) no-repeat;}
+.menu2 ul li.subnews2 {background:transparent url(menu4subnews2.gif) no-repeat;}
+.menu2 ul li.subnews3 {background:transparent url(menu4subnews3.gif) no-repeat;}
+.menu2 ul li.subserv {background:transparent url(menu4subserv.gif) no-repeat;}
+.menu2 ul li.subserv2 {background:transparent url(menu4subserv2.gif) no-repeat;}
+.menu2 ul li.subserv3 {background:transparent url(menu4subserv3.gif) no-repeat;}
+.menu2 ul li.subserv4 {background:transparent url(menu4subserv4.gif) no-repeat;}
+.menu2 ul li.subserv5 {background:transparent url(menu4subserv5.gif) no-repeat;}
+.menu2 ul li.subsubl {background:#eee url(next.gif) no-repeat top left;}
+.menu2 ul li.subsubr {background:#eee url(previous.gif) no-repeat 145px 0;}
+
+.menu2 ul li a, .menu2 ul li a:visited {
+display: block ; text-decoration:none;  padding:0px 0px 0px 0px;
+ border:1px  outset;
+  text-decoration: none; width:100px; height:30px; color:#000; padding-left:15px; line-height:32px;
+}
+* html .menu2 ul li a, .menu2 ul li a:visited {
+width:100px; w\idth:70px;
+}
+
+.menu2 ul li ul {
+visibility:hidden; position:absolute; top:0; left:0; height:0; overflow:hidden;
+}
+.menu2 table {
+margin:-2px; border-collapse:collapse; font-size:1.01em; border:1px;
+}
+
+/* fist line style for IE7 and non-IE browsers and the second line for IE5.5 and IE6 */
+.menu2 ul li:hover a,
+.menu2 ul li a:hover {
+color: #FFFF00; text-decoration: underline; border:1px   outset;width:100px; background-color: #003366 ;
+}
+.menu2 ul li:hover ul,
+.menu2 ul li a:hover ul {
+visibility:visible; width:196px; height:auto; position:absolute; top:30px; left:-1px; background-color:#EAF692;  border:1px solid #003399; overflow: visible; 
+}
+.menu2 ul li:hover ul li a,
+.menu2 ul li a:hover ul li a {
+display: block; background:transparent; text-decoration: none; color:#c00; height: auto; line-height:1.7em; padding:5px 10px 5px 5px; width:150px; w\idth:180px;
+}
+.menu2 ul li:hover ul li a.drop,
+.menu2 ul li a:hover ul li a.drop {
+display:block; color: #FFFF33; height:100px; line-height:1.5em; padding:5px 10px 5px 35px; width:170px; w\idth:125px;
+}
+.menu2 ul li:hover ul li ul,
+.menu2 ul li a:hover ul li a ul {
+visibility: collapse; position:absolute; top:100px; left:100px; height:100px; overflow: visible;
+}
+.menu2 ul li:hover ul li a:hover,
+.menu2 ul li a:hover ul li a:hover {
+color:#FFFF00; text-decoration: underline border:1px outset; background-color: #003366 ;}
+.menu2 ul li:hover ul li:hover ul,
+.menu2 ul li a:hover ul li a:hover ul {
+visibility:visible; width:275px; position: absolute; top:0; color:#000; left:197px; height:auto; border:1px solid #003399 ;
+}
+.menu2 ul li:hover ul li:hover ul.left,
+.menu2 ul li a:hover ul li a:hover ul.left {
+left:-166px;
+}
+.menu2 ul li:hover ul li:hover ul li a,
+.menu2 ul li a:hover ul li a:hover ul li a {
+display:block; color:#aa1122; height:auto; line-height:1.5em; padding:5px 10px 4px 5px; width:300px; w\idth:260px;
+}
+* html .menu2 ul li a:hover ul li a:hover ul li a {padding:4px 10px 4px 35px;}
+
+.menu2 ul li:hover ul li:hover ul li:hover a,
+.menu2 ul li a:hover ul li a:hover ul li a:hover {
+color:#FFFF00; text-decoration:underline;
+}
+

@@ -1,0 +1,114 @@
+<?php
+$this->load->helper('form');
+$this->lang->load('g_general', $this->session->userdata('lang_name'));
+$this->lang->load('g_button', $this->session->userdata('lang_name'));
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php if(!empty($page['page_name'])) : ?>
+<title><?=$this->lang->line('page_'.$page['page_name']);?> - <?=$this->m_config->content_select('main_sitename');?></title>
+<?php else : ?>
+<title><?=$this->m_config->content_select('main_sitename');?></title>
+<?php endif; ?>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!-- Start of menu and main CSS //-->
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>css/<?=$this->session->userdata('template');?>/<?=$this->session->userdata('lang_name');?>/cssplay.css" />
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>css/<?=$this->session->userdata('template');?>/<?=$this->session->userdata('lang_name');?>/main.css" />
+</head>
+<body>
+<div align="center" class="page_title"><?=$page_title;?></div>
+<p></p>
+<table>
+	<tr>
+		<td width="200"><b>Cabang</b></td>
+		<td><?php echo $this->session->userdata['ADMIN']['plant_name'];?> / <?php echo $this->session->userdata['ADMIN']['storage_location_name'];?> / <?php echo $this->session->userdata['ADMIN']['plant'];?></td>
+	</tr>
+  <tr>
+    <td><strong>Tanggal</strong></td>
+		<td>Dari <?=$date_from;?> s/d <?=$date_to;?></td>
+	</tr>
+</table>
+<p></p>
+<table width="1150" border="0" align="center">
+	<tr class="table_header_1">
+		<th class="table_header_1">Cabang</th>
+		<th class="table_header_1">NIK</th>
+		<th class="table_header_1">Nama Karyawan</th>
+		<th class="table_header_1">Divisi</th>
+		<th class="table_header_1">Department</th>
+		<th class="table_header_1">Bagian</th>
+		<th class="table_header_1">Jabatan</th>
+		<th class="table_header_1">Golongan</th>
+		<th class="table_header_1">Level</th>
+<?php
+$date_current = $timestamp['from'];
+
+for($j = 1; $j <= $days_interval; $j++) :
+?>
+		<th class="table_header_1"><?=date("d-m-Y", $date_current);?></th>
+<?php
+	$date_current = $date_current + 86400;
+endfor;
+?>
+		<th class="table_header_1">Total Per Izin/Cuti</th>
+		<th class="table_header_1">Total All</th>
+		<th class="table_header_1">Keterangan</th>
+  </tr>
+<?php
+if($data['employee'] !== FALSE) :
+	$i = 1;
+	foreach ($data['employee'] as $employee):
+?>
+<?php if($i % 2) : ?>
+  <tr class="table_row_1">
+<?php else : ?>
+  <tr class="table_row_2">
+<?php endif; ?>
+		<td><?=$employee['kode_cabang'];?></td>
+		<td><?=$employee['nik'];?></td>
+		<td><?=$employee['nama'];?></td>
+		<td><?=$employee['divisi'];?></td>
+		<td><?=$employee['department'];?></td>
+		<td><?=$employee['bagian'];?></td>
+		<td><?=$employee['jabatan'];?></td>
+		<td><?=$employee['golongan'];?></td>
+		<td><?=$employee['level'];?></td>
+<?php
+/*
+		for($j = 1; $j <= $days_interval; $j++) :
+?>
+		<td><?=$employee['attn'][$attn['tanggal']];?></td>
+<?php
+		endfor;
+*/
+		$date_current = $timestamp['from'];
+		for($j = 1; $j <= $days_interval; $j++) :
+			$attn_tanggal = date("Y-m-d", $date_current);
+?>
+				<td><?=$employee['attn'][$attn_tanggal];?></td>
+<?php
+			$date_current = $date_current + 86400;
+		endfor;
+
+		$kd_aktual_part = '';
+
+		if($employee['kd_aktual'] != FALSE) {
+			foreach($employee['kd_aktual'] as $key => $value) {
+				$kd_aktual_part .= '<div>'.$key.' = '.$value.'</div>';
+			}
+		}
+
+?>
+		<td><?=$kd_aktual_part;?></td>
+		<td><?=$employee['kd_aktual_total'];?></td>
+		<td>&nbsp;</td>
+  </tr>
+<?php
+		$i++;
+	endforeach;
+endif;
+?>
+</table>
+
+</body>

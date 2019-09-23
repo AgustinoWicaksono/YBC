@@ -1,0 +1,26 @@
+<?php
+$dailymsg_status = 1; //1: ok, 2: warning, 3:error
+if ($dailymsg_status==1) $dailymsg_hcolor = "#7ae35e";
+elseif ($dailymsg_status==2) $dailymsg_hcolor = "#fdd250";
+else	$dailymsg_hcolor = "#aa1122";
+
+
+$dailymsg_datetime = "02 Feb 2012 - 20.00 WIB";
+$dailymsg_content = '';
+
+?>
+<?php 
+if (((intval(date('H'))>19) || (intval(date('H'))<7)) && ($dailymsg_content=='')) {
+?>
+<div style="background-color:#353537;color:#ffffff;padding:10px;border-right:#aa1122 75px solid;">
+<div style="float:left;margin:0px 5px 5px 0px;"><img src="http://portal.johnnyandrean.com/images/pengumuman.jpg" alt="PEMBERITAHUAN" /></div>
+<div style="margin-left:50px;background-color:#353537;color:#ffffff;">
+<b style="color:#fdd250;font-size:120%;">PEMBERITAHUAN: </b><br />Setiap hari pada pukul <b style="color:#fdd250;">02.00-06.30 WIB</b>, Anda tidak dapat melakukan transaksi <b style="color:#fdd250;">APPROVAL</b>. Yang dapat Anda lakukan hanya <b style="color:#7ae35e;">SAVE</b> data. Karena pada jam tersebut ada konsolidasi data sistem SAP di server pusat. Harap lakukan proses approval di luar jam tersebut.</div>
+</div>
+<?php } elseif ($dailymsg_content!='') { ?>
+<div style="background-color:#353537;color:#ffffff;padding:10px;border-right:#aa1122 75px solid;"><div style="float:left;margin:0px 5px 5px 0px;"><img src="http://portal.johnnyandrean.com/images/pengumuman.jpg" alt="Pengumuman Harian" /></div>
+<div style="margin-left:50px;background-color:#353537;color:#ffffff;">
+<b style="color:<?php echo $dailymsg_hcolor; ?>;font-size:120%;">PENGUMUMAN HARIAN (<?php echo $dailymsg_datetime; ?>): </b><br /><?php echo $dailymsg_content; ?></div>
+</div>
+
+<?php } ?>

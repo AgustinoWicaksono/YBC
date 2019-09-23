@@ -1,0 +1,11 @@
+D:\API\SAPortal\InvStc\bin\Release\InvStc.exe.config
+D:\API\SAPortal\InvStc\obj\Release\Interop.SAPbobsCOM.dll
+D:\API\SAPortal\InvStc\obj\Release\InvStc.csproj.ResolveComReference.cache
+D:\API\SAPortal\InvStc\bin\Release\InvStc.exe
+D:\API\SAPortal\InvStc\bin\Release\InvStc.pdb
+D:\API\SAPortal\InvStc\obj\Release\InvStc.csprojResolveAssemblyReference.cache
+D:\API\SAPortal\InvStc\obj\Release\InvStc.Form1.resources
+D:\API\SAPortal\InvStc\obj\Release\InvStc.Properties.Resources.resources
+D:\API\SAPortal\InvStc\obj\Release\InvStc.csproj.GenerateResource.Cache
+D:\API\SAPortal\InvStc\obj\Release\InvStc.exe
+D:\API\SAPortal\InvStc\obj\Release\InvStc.pdb
